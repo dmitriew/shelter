@@ -23,7 +23,6 @@ line-height: 45.5px;
 margin-bottom: 19px;
 }
 .addition__subtitle {
-
 color: #545454;
 font-family: Georgia;
 font-size: 15px;
@@ -43,11 +42,11 @@ margin-bottom: 21px;
   line-height: 43px;
   border-radius: 9px;
   margin-bottom: 20px;
-  text-align: left;
+  text-align: center;
   & img {
     position: relative;
     top: 4px;
-    left: 6px;
+    left: -2px;
   }
 }
 .addition__text {

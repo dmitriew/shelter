@@ -26,7 +26,7 @@
 }
 .card__img {
   margin-top: 30px;
-  margin-bottom: 25px;
+  margin-bottom: 26px;
 }
 .card__name {
   color: #545454;
@@ -34,7 +34,7 @@
   font-size: 20px;
   font-weight: 400;
   letter-spacing: 1.2px;
-  margin-bottom: 45px;
+  margin-bottom: 46px;
 }
 .card__text {
 color: #292929;
@@ -43,6 +43,7 @@ font-size: 17px;
 font-weight: 400;
 letter-spacing: 1.02px;
 line-height: 22.1px;
+
 }
 .btn__wrapper {
   text-align: center;
@@ -52,6 +53,15 @@ line-height: 22.1px;
   height: 52px;
   margin-bottom: 100px;
 }
+.fc {
+  display: flex;
+  width: 1095px;
+  justify-content: space-around;
+}
 .slider__arrow {
-  margin-top: 200px;
+  position: relative;
+  align-self: center;
+    &:last-child {
+      justify-content: flex-end;
+    }
 }
