@@ -9,11 +9,23 @@
   line-height: 24px;
   margin-right: 35px;
   padding-top: 50px;
-
   &:last-child {
     margin-right: 0;
   }
   &:first-child {
   color: #fafafa;
 }
+  &:first-child {
+    position: relative;
+    &:after {
+      content: "";
+      width: 114px;
+      height: 3px;
+      background-color: #f1cdb3;
+      position: absolute;
+      bottom: 17px;
+      right: 2px;
+      z-index: 1;
+    }
+  }
 }

@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  min-width: 1920px;
+  width: 1920px;
   margin: 0;
   padding: 0;
 }
@@ -90,6 +90,21 @@ a {
   color: #fafafa;
 }
 
+.nav__item:first-child {
+  position: relative;
+}
+
+.nav__item:first-child:after {
+  content: "";
+  width: 114px;
+  height: 3px;
+  background-color: #f1cdb3;
+  position: absolute;
+  bottom: 17px;
+  right: 2px;
+  z-index: 1;
+}
+
 .notonly__title {
   color: #ffffff;
   font-family: Georgia;
@@ -127,7 +142,7 @@ a {
 .notonly__img {
   position: absolute;
   top: 154px;
-  right: 320px;
+  right: 310px;
 }
 
 .about {
@@ -197,7 +212,7 @@ a {
 
 .card__img {
   margin-top: 30px;
-  margin-bottom: 25px;
+  margin-bottom: 26px;
 }
 
 .card__name {
@@ -206,7 +221,7 @@ a {
   font-size: 20px;
   font-weight: 400;
   letter-spacing: 1.2px;
-  margin-bottom: 45px;
+  margin-bottom: 46px;
 }
 
 .card__text {
@@ -228,8 +243,19 @@ a {
   margin-bottom: 100px;
 }
 
+.fc {
+  display: flex;
+  width: 1095px;
+  justify-content: space-around;
+}
+
 .slider__arrow {
-  margin-top: 200px;
+  position: relative;
+  align-self: center;
+}
+
+.slider__arrow:last-child {
+  justify-content: flex-end;
 }
 
 .help__title {
@@ -315,13 +341,13 @@ a {
   line-height: 43px;
   border-radius: 9px;
   margin-bottom: 20px;
-  text-align: left;
+  text-align: center;
 }
 
 .addition--btn img {
   position: relative;
   top: 4px;
-  left: 6px;
+  left: -2px;
 }
 
 .addition__text {
