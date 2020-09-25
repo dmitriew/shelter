@@ -1,0 +1,57 @@
+.friends {
+  background-color: #f6f6f6;
+}
+.friends__title {
+  text-align: center;
+  color: #545454;
+  font-family: Georgia;
+  font-size: 35px;
+  font-weight: 400;
+  letter-spacing: 2.1px;
+  line-height: 45.5px;
+  padding-top: 80px;
+  margin-bottom: 60px;
+}
+.friends__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.friends__card {
+  width: 270px;
+  height: 435px;
+  border-radius: 9px;
+  background-color: #fafafa;
+  text-align: center;
+  margin-bottom: 60px;
+}
+.card__img {
+  margin-top: 30px;
+  margin-bottom: 25px;
+}
+.card__name {
+  color: #545454;
+  font-family: Georgia;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 1.2px;
+  margin-bottom: 45px;
+}
+.card__text {
+color: #292929;
+font-family: Georgia;
+font-size: 17px;
+font-weight: 400;
+letter-spacing: 1.02px;
+line-height: 22.1px;
+}
+.btn__wrapper {
+  text-align: center;
+}
+.friends--btn {
+  width: 261px;
+  height: 52px;
+  margin-bottom: 100px;
+}
+.slider__arrow {
+  margin-top: 200px;
+}

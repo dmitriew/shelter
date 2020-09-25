@@ -1,0 +1,26 @@
+.header__content {
+  background: rgb(81,65,54);
+  background: linear-gradient(90deg, rgba(81,65,54,1) 0%, rgba(34,32,33,1) 100%);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  width: 100%;
+  height: 882px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 225px;
+}
+.header__logo {
+  padding-top: 40px;
+  width: 184px;
+}
+.logo__subtitle {
+color: #ffffff;
+font-family: Arial;
+font-size: 13px;
+font-weight: 400;
+letter-spacing: 1.4px;
+margin: 0;
+margin-top: 5px;
+}

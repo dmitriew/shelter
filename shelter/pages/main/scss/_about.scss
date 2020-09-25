@@ -1,0 +1,30 @@
+.about {
+  display: flex;
+  margin-top: 80px;
+}
+.about__title {
+  color: #545454;
+  font-family: Georgia;
+  font-size: 35px;
+  font-weight: 400;
+  letter-spacing: 2.1px;
+  line-height: 45.5px;
+  margin-top: 16px;
+  margin-bottom: 22px;
+}
+.about__subtitle {
+  max-width: 430px;
+  color: #4c4c4c;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  & p:last-child {
+    margin-top: 25px;
+  }
+}
+.about__image {
+  margin-bottom: 96px;
+  margin-left: 175px;
+  margin-right: 120px;
+}
