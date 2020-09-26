@@ -3,7 +3,6 @@ html {
   font-family: Arial, Georgia, sans-serif;
   font-size: 13px;
 }
-
 *,
 *::before,
 *::after {
@@ -18,17 +17,14 @@ h6,
 p {
   margin: 0;
 }
-
 body {
-  width: 1920px;
+  max-width: 1920px;
   margin: 0;
   padding: 0;
 }
-
 img {
   max-width: 100%;
 }
-
 a {
   text-decoration: none;
 }

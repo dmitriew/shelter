@@ -21,7 +21,7 @@ p {
 }
 
 body {
-  width: 1920px;
+  max-width: 1920px;
   margin: 0;
   padding: 0;
 }
@@ -303,13 +303,15 @@ a {
 .slider__arrow {
   position: relative;
   justify-self: start;
-  align-self: center;
+  margin-top: 209px;
+  margin-left: 20px;
   cursor: pointer;
 }
 
 .slider__arrow:last-child {
   justify-self: end;
-  align-self: center;
+  margin-left: 0;
+  margin-right: 20px;
 }
 
 .slider__arrow:after {
@@ -474,7 +476,7 @@ a {
 
 .contacts__email {
   display: flex;
-  margin-bottom: 47px;
+  margin-bottom: 41px;
 }
 
 .contacts__email a {
@@ -498,7 +500,7 @@ a {
   font-size: 1.53846rem;
   font-weight: 400;
   letter-spacing: 1.2px;
-  line-height: 23px;
+  line-height: 32px;
   margin-left: 20px;
 }
 

@@ -84,12 +84,13 @@
 .slider__arrow {
   position: relative;
   justify-self: start;
-  align-self: center;
-
+  margin-top: 209px;
+  margin-left: 20px;
   cursor: pointer;
     &:last-child {
       justify-self: end;
-      align-self: center;
+      margin-left: 0;
+      margin-right: 20px;
     }
     &:after {
       content: "";
