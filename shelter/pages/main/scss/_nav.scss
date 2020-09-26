@@ -1,31 +1,21 @@
 .header__nav {
   display: flex;
+  align-items: center;
+  margin-top: 54px;
 }
 .nav__item {
   color: #cdcdcd;
   font-family: Arial;
-  font-size: 15px;
+  font-size: 1.15384rem;
   font-weight: 400;
   line-height: 24px;
+  list-style: none;
   margin-right: 35px;
-  padding-top: 50px;
   &:last-child {
     margin-right: 0;
   }
-  &:first-child {
-  color: #fafafa;
 }
-  &:first-child {
-    position: relative;
-    &:after {
-      content: "";
-      width: 114px;
-      height: 3px;
-      background-color: #f1cdb3;
-      position: absolute;
-      bottom: 17px;
-      right: 2px;
-      z-index: 1;
-    }
-  }
+.nav__item_active {
+  border-bottom: solid 3px #F1CDB3;
+  margin-right: 38px;
 }

@@ -5,16 +5,24 @@
   text-align: center;
   color: #545454;
   font-family: Georgia;
-  font-size: 35px;
+  font-size: 2.69230rem;
   font-weight: 400;
   letter-spacing: 2.1px;
   line-height: 45.5px;
-  padding-top: 80px;
+  padding-top: 81px;
   margin-bottom: 60px;
 }
-.friends__wrapper {
+.card__block {
   display: flex;
   justify-content: space-between;
+}
+.friends__slider {
+  display: grid;
+  grid-template-columns: auto 990px auto;
+ }
+.friends__wrapper {
+  display: grid;
+  grid-template-rows: auto 435px auto;
 }
 .friends__card {
   width: 270px;
@@ -23,6 +31,13 @@
   background-color: #fafafa;
   text-align: center;
   margin-bottom: 60px;
+  box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+  &:hover {
+    background-color: #FFFFFF;
+  }
+}
+.card--white {
+  background-color: #FFFFFF
 }
 .card__img {
   margin-top: 30px;
@@ -31,37 +46,61 @@
 .card__name {
   color: #545454;
   font-family: Georgia;
-  font-size: 20px;
+  font-size: 1.53846rem;
   font-weight: 400;
   letter-spacing: 1.2px;
   margin-bottom: 46px;
 }
 .card__text {
-color: #292929;
-font-family: Georgia;
-font-size: 17px;
-font-weight: 400;
-letter-spacing: 1.02px;
-line-height: 22.1px;
-
+  color: #292929;
+  font-family: Georgia;
+  font-size: 1.30769rem;
+  font-weight: 400;
+  letter-spacing: 1.02px;
+  line-height: 22.1px;
+  position: relative;
+    &::after {
+      content: "";
+      width: 187px;
+      height: 52px;
+      position: absolute;
+      border: 2px solid #F1CDB3;
+      border-radius: 100px;
+      top:-13px;
+      right: 42px;
+      z-index: 1;
+      cursor: pointer;
+    }
 }
-.btn__wrapper {
+.btn--center {
   text-align: center;
 }
 .friends--btn {
   width: 261px;
   height: 52px;
-  margin-bottom: 100px;
-}
-.fc {
-  display: flex;
-  width: 1095px;
-  justify-content: space-around;
+  margin-top: 61px;
+  margin-bottom: 99px;
 }
 .slider__arrow {
   position: relative;
+  justify-self: start;
   align-self: center;
+
+  cursor: pointer;
     &:last-child {
-      justify-content: flex-end;
+      justify-self: end;
+      align-self: center;
+    }
+    &:after {
+      content: "";
+      width: 52px;
+      height: 52px;
+      position: absolute;
+      border: 2px solid #F1CDB3;
+      border-radius: 100px;
+      top:-15px;
+      right: -18px;
+      z-index: 1;
+      cursor: pointer;
     }
 }

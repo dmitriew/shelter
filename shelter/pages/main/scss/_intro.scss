@@ -1,20 +1,28 @@
-
-.notonly__title {
+.intro {
+  display: flex;
+  justify-content: space-between;
+}
+.intro__content {
+  display: flex;
+  flex-direction: column;
+}
+.intro__title {
   color: #ffffff;
   font-family: Georgia;
-  font-size: 44px;
+  font-size: 3.38461rem;
   font-weight: 400;
-  line-height: 57.2px;
+  line-height: 130%;
   margin-bottom: 42px;
+  margin-top: 225px;
 }
-.notonly__text {
+.intro__text {
   width: 460px;
   color: #cdcdcd;
   font-family: Arial;
-  font-size: 15px;
+  font-size: 1.15384rem;
   font-weight: 400;
   line-height: 24px;
-  margin-bottom: 40px;
+  margin-bottom: 39px;
 }
 .btn {
   width: 207px;
@@ -24,14 +32,16 @@
   color: #292929;
   border: none;
   font-family: Georgia;
-  font-size: 17px;
+  font-size: 1.30769rem;
   font-weight: 400;
   letter-spacing: 1.02px;
   line-height: 22.1px;
   cursor: pointer;
+  &:hover{
+    background-color: #FDDCC4;
+  }
 }
-.notonly__img {
-  position: absolute;
-  top: 154px;
-  right: 310px;
+.intro__img {
+  margin-top: 60px;
 }
+

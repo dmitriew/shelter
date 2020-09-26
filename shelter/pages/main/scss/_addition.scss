@@ -2,58 +2,69 @@
   background-color: #f6f6f6;
 }
 .addition__content {
-  padding-top: 82px;
+  padding-top: 81px;
   display: flex;
 }
 
 .addition__img {
   margin-top: 10px;
-  margin-bottom: 107px;
+  margin-bottom: 109px;
   margin-left: 142px;
   margin-right: 30px;
 }
 .addition__title {
-
-color: #545454;
-font-family: Georgia;
-font-size: 35px;
-font-weight: 400;
-letter-spacing: 2.1px;
-line-height: 45.5px;
-margin-bottom: 19px;
-}
-.addition__subtitle {
-color: #545454;
-font-family: Georgia;
-font-size: 15px;
-font-weight: 400;
-letter-spacing: 0.9px;
-line-height: 16.5px;
-margin-bottom: 21px;
-}
-.addition--btn {
-  width: 349px;
-  height: 43px;
   color: #545454;
   font-family: Georgia;
-  font-size: 20px;
+  font-size: 2.69230rem;
   font-weight: 400;
-  letter-spacing: 1.2px;
-  line-height: 43px;
-  border-radius: 9px;
+  letter-spacing: 2.1px;
+  line-height: 45.5px;
   margin-bottom: 20px;
-  text-align: center;
-  & img {
-    position: relative;
-    top: 4px;
-    left: -2px;
-  }
+}
+.addition__subtitle {
+  color: #545454;
+  font-family: Georgia;
+  font-size: 1.153845rem;
+  font-weight: 400;
+  letter-spacing: 0.9px;
+  line-height: 16.5px;
+  margin-bottom: 21px;
 }
 .addition__text {
   max-width: 380px;
-color: #b2b2b2;
-font-family: Arial;
-font-size: 12px;
-font-weight: 400;
-line-height: 18px;
+  color: #b2b2b2;
+  font-family: Arial;
+  font-size: 0.92307rem;
+  font-weight: 400;
+  line-height: 18px;
+  padding-top: 20px;
+}
+.btn__link {
+  display: inline-block;
+  margin: 0 auto;
+  text-decoration: none;
+  color: #292929;
+  padding: 9px 30px;
+  text-align: center;
+  font-family: Georgia;
+  font-size: 1.53846rem;
+  font-weight: 400;
+  letter-spacing: 1.2px;
+  border: 2px solid #f1cdb3;
+  position: relative;
+  background-color: #f1cdb3;
+  width: 349px;
+  height: 43px;
+  border-radius: 9px;
+  padding-left: 50px;
+  padding-right: 10px;
+    &::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 24px;
+  top: 7px;
+  left: 14px;
+  background-image: url("/assets/images/credit-card.png");
+}
 }
