@@ -7,41 +7,44 @@
     <title>shelter</title>
   </head>
   <body>
-    <div class="header__content">
+    <div class="header__wrapper">
       <div class="container">
         <header class="header">
           <div class="header__logo">
             <h1 class="visually-hidden">Cozy House</h1>
-            <img src="/assets/images/logo.png" alt="logo" />
+            <h1 class="logo__title">Cozy House</h1>
             <p class="logo__subtitle">Shelter for pets in Boston</p>
           </div>
           <nav class="header__nav">
-            <a class="nav__item" href="#">About the shelter</a>
-            <a class="nav__item" href="#">Our pets</a>
-            <a class="nav__item" href="#">Help the shelter</a>
-            <a class="nav__item" href="#">Contacts</a>
+            <li class="nav__item nav__item_active">About the shelter</li>
+            <li class="nav__item">Our pets</li>
+            <li class="nav__item">Help the shelter</li>
+            <li class="nav__item">Contacts</li>
           </nav>
         </header>
-        <div class="notonly">
-          <div class="notonly__img">
+
+        <section class="intro">
+          <div class="intro__content">
+            <div class="intro__title">
+              Not only people<br />
+              need a house
+            </div>
+            <div class="intro__text">
+              We offer to give a chance to a little and nice puppy with an
+              extremely wide and open heart. He or she will love you more than
+              anybody else in the world, you will see!
+            </div>
+            <button class="btn">Make a friend</button>
+          </div>
+          <div class="intro__img">
             <img src="/assets/images/start-screen-puppy.png" alt="" />
           </div>
-          <div class="notonly__title">
-            Not only people<br />
-            need a house
-          </div>
-          <div class="notonly__text">
-            We offer to give a chance to a little and nice puppy with an
-            extremely wide and open heart. He or she will love you more than
-            anybody else in the world, you will see!
-          </div>
-          <button class="btn">Make a friend</button>
-        </div>
+        </section>
       </div>
     </div>
     <main class="main">
       <div class="container">
-        <div class="about">
+        <section class="about">
           <div class="about__image">
             <img src="/assets/images/about-pets.png" alt="" />
           </div>
@@ -67,100 +70,106 @@
               </p>
             </div>
           </div>
-        </div>
+        </section>
       </div>
-      <div class="friends">
+      <section class="friends">
         <div class="container">
-          <div class="friends__title">
-            Our friends who<br />
-            are looking for a house
-          </div>
           <div class="friends__wrapper">
-            <div class="slider__arrow">
-              <img src="/assets/images/Arrow.png" alt="" />
+            <div class="friends__title">
+              Our friends who<br />
+              are looking for a house
             </div>
-            <div class="friends__card">
-              <img
-                class="card__img"
-                src="/assets/images/photo1.png"
-                alt="cat"
-              />
-              <div class="card__name">Katrine</div>
-              <div class="card__text">Learn more</div>
+            <div class="friends__slider">
+              <div class="slider__arrow">
+                <img src="/assets/images/Arrow.png" alt="" />
+              </div>
+              <div class="card__block">
+                <div class="friends__card">
+                  <img
+                    class="card__img"
+                    src="/assets/images/photo1.png"
+                    alt="cat"
+                  />
+                  <div class="card__name">Katrine</div>
+                  <div class="card__text">Learn more</div>
+                </div>
+                <div class="friends__card">
+                  <img
+                    class="card__img"
+                    src="/assets/images/photo.png"
+                    alt="cat"
+                  />
+                  <div class="card__name">Jennifer</div>
+                  <div class="card__text">Learn more</div>
+                </div>
+                <div class="friends__card card--white">
+                  <img
+                    class="card__img"
+                    src="/assets/images/photo3.png"
+                    alt="cat"
+                  />
+                  <div class="card__name">Woody</div>
+                  <div class="card__text">Learn more</div>
+                </div>
+              </div>
+              <div class="slider__arrow">
+                <img src="/assets/images/Arrow2.png" alt="" />
+              </div>
             </div>
-            <div class="friends__card">
-              <img class="card__img" src="/assets/images/photo.png" alt="cat" />
-              <div class="card__name">Jennifer</div>
-              <div class="card__text">Learn more</div>
+            <div class="btn--center">
+              <button class="btn friends--btn">Get to know the rest</button>
             </div>
-            <div class="friends__card">
-              <img
-                class="card__img"
-                src="/assets/images/photo3.png"
-                alt="cat"
-              />
-              <div class="card__name">Woody</div>
-              <div class="card__text">Learn more</div>
-            </div>
-            <div class="slider__arrow">
-              <img src="/assets/images/Arrow2.png" alt="" />
-            </div>
-          </div>
-          <div class="btn__wrapper">
-            <button class="btn friends--btn">Get to know the rest</button>
           </div>
         </div>
-      </div>
-
-      <div class="help">
-        <div class="container">
-          <div class="help__title">
-            How you can help<br />
-            our shelter
-          </div>
-          <div class="help__items">
+      </section>
+      <div class="container">
+        <section class="help">
+          <div class="help__title">How you can help<br />our shelter</div>
+          <div class="help__slider">
             <div class="help__item">
-              <img src="/assets/images/Vector1.svg" alt="Pet-food" />
+              <img src="/assets/images/Vector1.svg" alt="Pet food" />
               <div class="item__name">Pet food</div>
             </div>
+            <div class="div"></div>
             <div class="help__item">
               <img src="/assets/images/Vector2.svg" alt="Transportation" />
               <div class="item__name">Transportation</div>
             </div>
+            <div class="div"></div>
             <div class="help__item">
               <img src="/assets/images/Vector3.svg" alt="Toys" />
               <div class="item__name">Toys</div>
             </div>
+            <div class="div"></div>
             <div class="help__item">
-              <img src="/assets/images/Vector4.svg" alt="Bowls-and-cups" />
+              <img src="/assets/images/Vector4.svg" alt="Bowls and cups" />
               <div class="item__name">Bowls and cups</div>
             </div>
+            <div class="div"></div>
             <div class="help__item">
               <img src="/assets/images/Vector5.svg" alt="Shampoos" />
               <div class="item__name">Shampoos</div>
             </div>
-          </div>
-          <div class="help__items2">
             <div class="help__item">
-              <img src="/assets/images/Vector1.svg" alt="Vitamins" />
+              <img src="/assets/images/Vector6.svg" alt="Vitamins" />
               <div class="item__name">Vitamins</div>
             </div>
             <div class="help__item">
-              <img src="/assets/images/Vector2.svg" alt="Medicines" />
+              <img src="/assets/images/Vector7.svg" alt="Medicines" />
               <div class="item__name">Medicines</div>
             </div>
             <div class="help__item">
-              <img src="/assets/images/Vector3.svg" alt="Collars-leashes" />
+              <img src="/assets/images/Vector8.svg" alt="Collars / leashes" />
               <div class="item__name">Collars / leashes</div>
             </div>
             <div class="help__item">
-              <img src="/assets/images/Vector4.svg" alt="Sleeping-areas" />
+              <img src="/assets/images/Vector9.svg" alt="Sleeping areas" />
               <div class="item__name">Sleeping areas</div>
             </div>
           </div>
-        </div>
+        </section>
       </div>
-      <div class="addition">
+      <section class="addition">
         <div class="container">
           <div class="addition__content">
             <div class="addition__img">
@@ -174,10 +183,7 @@
               <div class="addition__subtitle">
                 Name of the bank / Type of bank account
               </div>
-              <button class="btn addition--btn">
-                <img src="/assets/images/credit-card.png" alt="" />
-                8380 2880 8028 8791 7435
-              </button>
+              <a href="#" class="btn__link">8380 2880 8028 8791 7435</a>
               <div class="addition__text">
                 Legal information and lorem ipsum dolor sit amet, consectetur
                 adipiscing elit. Maecenas a ipsum at libero sagittis dignissim
@@ -187,7 +193,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </main>
     <footer class="footer">
       <div class="container">
@@ -212,15 +218,21 @@
               for your visit
             </div>
             <div class="location__pin">
-              <img src="/assets/images/pin.png" alt="" />
-              <a href="#"
-                >1 Central Street, Boston<br />
-                (entrance from the store)</a
-              >
-            </div>
-            <div class="location__pin">
-              <img src="/assets/images/pin.png" alt="" />
-              <a href="#">18 South Park, London </a>
+              <div class="pin__wrapper">
+                <div class="location__img">
+                  <img src="/assets/images/pin.png" alt="location" />
+                </div>
+                <a href="#"
+                  >1 Central Street, Boston<br />
+                  (entrance from the store)</a
+                >
+              </div>
+              <div class="pin__wrapper">
+                <div class="location__img img2">
+                  <img src="/assets/images/pin.png" alt="location" />
+                </div>
+                <a href="#">18 South Park, London </a>
+              </div>
             </div>
           </div>
           <div class="footer__image">

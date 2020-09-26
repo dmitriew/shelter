@@ -1,26 +1,32 @@
-.header__content {
-  background: rgb(81,65,54);
-  background: linear-gradient(90deg, rgba(81,65,54,1) 0%, rgba(34,32,33,1) 100%);
-  background-repeat: no-repeat;
+.header__wrapper {
+  background: url('/assets/images/noise_transparent.png'), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+  background-repeat: repeat;
   background-position-x: center;
   width: 100%;
-  height: 882px;
+  height: 908px;
 }
 .header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 225px;
 }
 .header__logo {
-  padding-top: 40px;
-  width: 184px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 61px;
+}
+.logo__title {
+  color: #f1cdb3;
+  font-family: Georgia;
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 1.92px;
+  line-height: 35.2px;
 }
 .logo__subtitle {
-color: #ffffff;
-font-family: Arial;
-font-size: 13px;
-font-weight: 400;
-letter-spacing: 1.4px;
-margin: 0;
-margin-top: 5px;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 1.4px;
+  margin-top: 9px;
 }
