@@ -21,7 +21,7 @@ p {
 }
 
 body {
-  max-width: 1920px;
+  min-width: 1920px;
   margin: 0;
   padding: 0;
 }
@@ -103,6 +103,10 @@ a {
 
 .nav__item:last-child {
   margin-right: 0;
+}
+
+.nav__item:hover {
+  cursor: pointer;
 }
 
 .nav__item_active {
