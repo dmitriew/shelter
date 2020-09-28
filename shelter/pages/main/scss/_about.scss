@@ -1,6 +1,8 @@
 .about {
   display: flex;
   margin-top: 79px;
+  justify-content: center;
+  column-gap: 118px;
 }
 .about__text {
   display: flex;
@@ -29,6 +31,4 @@
 }
 .about__image {
   margin-bottom: 96px;
-  margin-left: 175px;
-  margin-right: 120px;
 }
