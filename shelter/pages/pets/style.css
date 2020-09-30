@@ -223,13 +223,13 @@ a {
 .footer__wrapper {
   display: flex;
   justify-content: space-between;
-  padding-top: 37px;
+  flex-wrap: wrap;
+  padding-top: 40px;
+  padding-bottom: 0;
 }
 
-.footer__contacts {
-  display: flex;
-  column-gap: 160px;
-  padding-top: 19px;
+.contacts__container {
+  max-width: 299px;
 }
 
 .contacts__title {
@@ -239,7 +239,14 @@ a {
   font-size: 35px;
   line-height: 130%;
   letter-spacing: 0.06em;
-  padding-bottom: 42px;
+  padding-top: 19px;
+  padding-bottom: 40px;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.contacts__title--pin {
+  padding-bottom: 30px;
 }
 
 .contacts__item {
@@ -251,15 +258,14 @@ a {
   color: #F1CDB3;
   display: block;
   padding-left: 48px;
-  padding-bottom: 42px;
+  padding-bottom: 41px;
   position: relative;
 }
 
 .contacts__item a {
   color: #F1CDB3;
   padding-left: 14px;
-  text-align: center;
-  line-height: 30px;
+  line-height: 28px;
 }
 
 .contacts__item--mail::after {
@@ -286,12 +292,29 @@ a {
   background-repeat: no-repeat;
 }
 
-.contacts__item--pin::after {
+.contacts__item--pin {
+  display: block;
+  padding-bottom: 40px;
+  padding-left: 41px;
+  margin-left: 0px;
+}
+
+.contacts__item--pin:last-child::before {
+  top: -5px;
+}
+
+.contacts__item--pin a {
+  line-height: 0;
+  padding-left: 0px;
+}
+
+.contacts__item--pin::before {
   content: "";
   width: 40px;
   height: 36px;
   z-index: 1;
-  top: 0;
+  top: 6px;
+  bottom: 6px;
   left: 0;
   position: absolute;
   background-image: url("/shelter/assets/images/pin.png");
