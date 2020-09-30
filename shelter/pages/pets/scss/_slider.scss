@@ -1,0 +1,40 @@
+.slider__nav {
+  display: flex;
+  justify-content: space-between;
+  max-width: 340px;
+  margin: 59px auto 0;
+  padding-bottom: 100px;
+  &__item {
+    font-family: Georgia;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 46px;
+    text-align: center;
+    position: relative;
+    text-decoration: none;
+    color: #292929;
+    &--active {
+      border: 2px solid #F1CDB3;
+      border-radius: 100px;
+      width: 52px;
+      height: 52px;
+      &:hover {
+        background: #F1CDB3;
+      }
+    }
+    &--disable {
+      border: 2px solid #CDCDCD;
+      border-radius: 100px;
+      width: 52px;
+      height: 52px;
+    }
+    &--focus {
+      border: 2px solid #F1CDB3;
+      background: #F1CDB3;
+      border-radius: 100px;
+      width: 52px;
+      height: 52px;
+    }
+  }
+}
