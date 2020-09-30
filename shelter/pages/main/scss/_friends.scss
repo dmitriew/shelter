@@ -36,19 +36,16 @@
     background-color: #FFFFFF;
   }
 }
-.card--white {
-  background-color: #FFFFFF
-}
-.card__img {
-  margin-top: 30px;
-  margin-bottom: 26px;
-}
+// .card--white {
+//   background-color: #FFFFFF
+// }
 .card__name {
   color: #545454;
   font-family: Georgia;
   font-size: 1.53846rem;
   font-weight: 400;
   letter-spacing: 1.2px;
+  padding-top: 28px;
   margin-bottom: 46px;
 }
 .card__text {
@@ -66,7 +63,7 @@
       position: absolute;
       border: 2px solid #F1CDB3;
       border-radius: 100px;
-      top:-13px;
+      top:-15px;
       right: 42px;
       z-index: 1;
       cursor: pointer;
