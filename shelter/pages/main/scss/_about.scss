@@ -1,8 +1,11 @@
 .about {
   display: flex;
-  margin-top: 79px;
-  justify-content: center;
-  column-gap: 118px;
+  padding-top: 79px;
+  padding-right: 176px;
+  padding-left: 176px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  // column-gap: 118px;
 }
 .about__text {
   display: flex;
@@ -16,7 +19,7 @@
   letter-spacing: 2.1px;
   line-height: 45.5px;
   margin-top: 16px;
-  margin-bottom: 23px;
+  margin-bottom: 25px;
 }
 .about__subtitle {
   max-width: 430px;
@@ -30,5 +33,5 @@
   }
 }
 .about__image {
-  margin-bottom: 96px;
+  padding-bottom: 96px;
 }
