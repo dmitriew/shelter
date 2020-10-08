@@ -3,6 +3,11 @@
   align-items: center;
   column-gap: 36px;
 }
+@media (max-width: 320px) {
+  .header__nav {
+    display: none;
+  }
+}
 .nav__item {
   color: #545454;
   font-family: Arial;
