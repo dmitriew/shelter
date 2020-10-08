@@ -10,19 +10,37 @@
   letter-spacing: 2.1px;
   line-height: 45.5px;
   padding-top: 81px;
-  margin-bottom: 60px;
+  margin-bottom: 59px;
 }
 .card__block {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  .card__block {
+    justify-content: start;
+    column-gap: 40px;
+  }
 }
 .friends__slider {
   display: grid;
   grid-template-columns: auto 990px auto;
  }
+ @media (max-width: 768px) {
+  .friends__slider {
+    display: flex;
+    justify-content: space-between;
+  }
+}
 .friends__wrapper {
   display: grid;
   grid-template-rows: auto 435px auto;
+}
+@media (max-width: 768px) {
+  .friends__wrapper {
+    display: inline;
+  }
 }
 .friends__card {
   width: 270px;
@@ -36,9 +54,11 @@
     background-color: #FFFFFF;
   }
 }
-// .card--white {
-//   background-color: #FFFFFF
-// }
+@media (max-width: 768px) {
+  .friends__card--hide {
+    display: none;
+  }
+}
 .card__name {
   color: #545454;
   font-family: Georgia;
@@ -77,6 +97,11 @@
   height: 52px;
   margin-top: 61px;
   margin-bottom: 99px;
+}
+@media (max-width: 768px) {
+  .friends--btn {
+    margin-top: 1px;
+  }
 }
 .slider__arrow {
   position: relative;
