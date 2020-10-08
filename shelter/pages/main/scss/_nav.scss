@@ -3,8 +3,13 @@
   align-items: center;
   column-gap: 36px;
 }
+@media (max-width: 768px) {
+  .header__nav {
+    display: none;
+  }
+}
 .nav__item {
-  color: #545454;
+  color: #CDCDCD;
   font-family: Arial;
   font-size: 1.15384rem;
   font-weight: 400;
@@ -20,8 +25,14 @@
     color: #292929;
   }
 }
+@media (max-width: 768px) {
+  .nav__item {
+    margin-top: 42px;
+  }
+}
 .nav__item_active {
+  color: #FAFAFA;
   border-bottom: solid 3px #F1CDB3;
-  padding-top: 4px;
-  padding-bottom:0;
+  padding-top: 5px;
+  padding-bottom:1px;
 }

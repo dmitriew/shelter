@@ -8,6 +8,11 @@
   line-height: 45.5px;
   padding-top: 81px;
 }
+@media (max-width: 768px) {
+  .help__title {
+    margin-bottom: 0;
+  }
+}
 .help__slider {
   display: flex;
   flex-wrap: wrap;
@@ -24,6 +29,15 @@
   margin-left: 60px;
   margin-right: 60px;
   min-height: 114px;
+}
+@media (max-width: 768px) {
+  .help__item {
+    margin: 0;
+    margin-top: 60px;
+    margin-bottom: 0;
+    width: 234.33333px;
+    min-height: 110px;
+  }
 }
 .item__name {
   color: #545454;
