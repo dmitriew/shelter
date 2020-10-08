@@ -38,3 +38,15 @@
     }
   }
 }
+@media (max-width: 768px) {
+  .slider__nav {
+    margin: 38px auto 0;
+    padding-bottom: 78px;
+  }
+}
+@media (max-width: 320px) {
+  .slider__nav {
+    margin: 42px auto 0;
+    padding-bottom: 42px;
+  }
+}

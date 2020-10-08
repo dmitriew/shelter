@@ -8,16 +8,37 @@
   font-family: Georgia;
   font-size: 2.69230rem;
   font-weight: 400;
-  letter-spacing: 2.1px;
+  letter-spacing: 2.0px;
   line-height: 45.5px;
   padding-top: 81px;
   margin-bottom: 60px;
+  color: #545454;
+}
+@media (max-width: 768px) {
+  .friends__title {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 320px) {
+  .friends__title {
+    font-size: 25px;
+    padding-top: 42px;
+    margin-bottom: 42px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+  }
 }
 .card__block {
   display: flex;
   flex-wrap: wrap;
   column-gap: 40px;
   row-gap: 30px;
+}
+@media (max-width: 768px) {
+  .card__block {
+    justify-content: space-around;
+    padding: 0 64px;
+  }
 }
 .friends__card {
   width: 270px;
@@ -30,6 +51,16 @@
     background-color: #FFFFFF;
   }
 }
+@media (max-width: 768px) {
+  .friends__card--hide {
+    display: none;
+  }
+}
+@media (max-width: 320px) {
+  .friends__card--hide-sm {
+    display: none;
+  }
+}
 .card__name {
   color: #545454;
   font-family: Georgia;
@@ -38,6 +69,11 @@
   letter-spacing: 1.1px;
   margin-top: 26px;
   margin-bottom: 44px;
+}
+@media (max-width: 320px) {
+  .card__name {
+    margin-bottom: 45px;
+  }
 }
 .card__text {
   color: #292929;
