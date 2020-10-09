@@ -3,7 +3,7 @@
   align-items: center;
   column-gap: 36px;
 }
-@media (max-width: 768px) {
+@media (max-width: 711px) {
   .header__nav {
     display: none;
   }
@@ -27,7 +27,7 @@
 }
 @media (max-width: 768px) {
   .nav__item {
-    margin-top: 42px;
+    margin-top: 24px;
   }
 }
 .nav__item_active {

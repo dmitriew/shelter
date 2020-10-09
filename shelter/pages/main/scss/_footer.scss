@@ -1,12 +1,12 @@
 .footer {
-  background: url('/shelter/assets/images/noise_transparent.png'), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
-}
-.footer__wrapper {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding-top: 40px;
-  padding-bottom:0;
+  background: url('/shelter/assets/images/noise_transparent@2x.png'), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding-top: 35px;
+      padding-bottom:0;
+    }
 }
 
 @media (max-width: 768px) {
@@ -14,7 +14,7 @@
     padding: 12px 34px 0;
   }
   .footer__img {
-    padding-top: 29px;
+    padding-top: 25px;
     margin: 0 auto;
   }
 }
@@ -28,101 +28,100 @@
     width: 93%;
   }
 }
-.contacts__container {
-  max-width: 299px;
+.contacts {
+      &__container {
+        max-width: 299px;
+      }
+      &__title {
+      font-family: Georgia;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 35px;
+      line-height: 130%;
+      letter-spacing: 0.06em;
+      padding-top: 19px;
+      padding-bottom: 40px;
+      padding-left: 0;
+      margin-left: 0;
+      color: #FFFFFF;
+    }
+    &__title--pin {
+      padding-bottom: 34px;
+    }
+    &__item {
+      font-family: Georgia;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      letter-spacing: 0.06em;
+      color: #F1CDB3;
+      display: block;
+      padding-left: 48px;
+      padding-bottom: 43px;
+      position: relative;
+      & a {
+        color: #F1CDB3;
+        padding-left: 14px;
+        line-height: 28px;
+      }
+    }
+    &__item--mail::after {
+      content: "";
+      width: 40px;
+      height: 26px;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      position: absolute;
+      background-image: url("/shelter/assets/images/mail.png");
+      background-repeat: no-repeat;
+    }
+    &__item--phone::after {
+      content: "";
+      width: 40px;
+      height: 32px;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      position: absolute;
+      background-image: url("/shelter/assets/images/phone.png");
+      background-repeat: no-repeat;
+    }
+    &__item--pin {
+      display: block;
+      padding-bottom: 40px;
+      padding-left: 41px;
+      margin-left: 0px;
+      &:last-child::before {
+        top: -5px;
+      }
+    }
+    &__item--pin::before {
+      content: "";
+      width: 40px;
+      height: 36px;
+      z-index: 1;
+      top: 6px;
+      bottom: 6px;
+      left: 0;
+      position: absolute;
+      background-image: url("/shelter/assets/images/pin.png");
+      background-repeat: no-repeat;
+    }
+    &__item--pin a {
+      line-height: 0;
+      padding-left: 0px;
+    }
 }
-.contacts__title {
-  font-family: Georgia;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 35px;
-  line-height: 130%;
-  letter-spacing: 0.06em;
-  padding-top: 19px;
-  padding-bottom: 40px;
-  padding-left: 0;
-  margin-left: 0;
-  color: #FFFFFF;
-}
+
 @media (max-width: 320px) {
   .contacts__title {
     text-align: center;
   }
-}
-.contacts__title--pin {
-  padding-bottom: 30px;
-}
-.contacts__item {
-  font-family: Georgia;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
-  letter-spacing: 0.06em;
-  color: #F1CDB3;
-  display: block;
-  padding-left: 48px;
-  padding-bottom: 41px;
-  position: relative;
-  & a {
-    color: #F1CDB3;
-    padding-left: 14px;
-    line-height: 28px;
-  }
-}
-@media (max-width: 320px) {
   .contacts__item {
     margin-left: 10px;
   }
-}
-.contacts__item--mail::after {
-  content: "";
-  width: 40px;
-  height: 26px;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  position: absolute;
-  background-image: url("/shelter/assets/images/mail.png");
-  background-repeat: no-repeat;
-}
-.contacts__item--phone::after {
-  content: "";
-  width: 40px;
-  height: 32px;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  position: absolute;
-  background-image: url("/shelter/assets/images/phone.png");
-  background-repeat: no-repeat;
-}
-@media (max-width: 320px) {
   .contacts__item--phone {
     padding-bottom: 29px;
   }
-}
-.contacts__item--pin {
-  display: block;
-  padding-bottom: 40px;
-  padding-left: 41px;
-  margin-left: 0px;
-  &:last-child::before {
-    top: -5px;
-  }
-}
-.contacts__item--pin a {
-  line-height: 0;
-  padding-left: 0px;
-}
-.contacts__item--pin::before {
-  content: "";
-  width: 40px;
-  height: 36px;
-  z-index: 1;
-  top: 6px;
-  bottom: 6px;
-  left: 0;
-  position: absolute;
-  background-image: url("/shelter/assets/images/pin.png");
-  background-repeat: no-repeat;
 }
