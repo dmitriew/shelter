@@ -28,14 +28,14 @@
     letter-spacing: 0.06em;
   }
 }
-.card__block {
+.friends__block {
   display: flex;
   flex-wrap: wrap;
   column-gap: 40px;
   row-gap: 30px;
 }
 @media (max-width: 768px) {
-  .card__block {
+  .friends__block {
     justify-content: space-around;
     padding: 0 64px;
   }
@@ -61,7 +61,7 @@
     display: none;
   }
 }
-.card__name {
+.friends__name {
   color: #545454;
   font-family: Georgia;
   font-size: 1.53846rem;
@@ -71,11 +71,11 @@
   margin-bottom: 44px;
 }
 @media (max-width: 320px) {
-  .card__name {
+  .friends__name {
     margin-bottom: 45px;
   }
 }
-.card__text {
+.friends__text {
   color: #292929;
   font-family: Georgia;
   font-size: 1.30769rem;

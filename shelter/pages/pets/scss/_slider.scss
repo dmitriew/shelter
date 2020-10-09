@@ -1,4 +1,4 @@
-.slider__nav {
+.slider {
   display: flex;
   justify-content: space-between;
   max-width: 340px;
@@ -39,13 +39,13 @@
   }
 }
 @media (max-width: 768px) {
-  .slider__nav {
-    margin: 38px auto 0;
-    padding-bottom: 78px;
+  .slider {
+    margin: 39px auto 0;
+    padding-bottom: 76px;
   }
 }
 @media (max-width: 320px) {
-  .slider__nav {
+  .slider {
     margin: 42px auto 0;
     padding-bottom: 42px;
   }

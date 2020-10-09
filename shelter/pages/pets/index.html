@@ -3,23 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/shelter/pages/pets/style.min.css" />
+    <link rel="stylesheet" href="/shelter/pages/pets/style.css" />
     <title>shelter</title>
   </head>
   <body>
     <div class="container">
       <header class="header">
         <div class="header__logo">
-          <h1 class="logo__title">Cozy House</h1>
-          <p class="logo__subtitle">Shelter for pets in Boston</p>
-          <section class="header__burger"></section>
+          <h1 class="header__title">Cozy House</h1>
+          <p class="header__subtitle">Shelter for pets in Boston</p>
         </div>
-        <nav class="header__nav">
+        <button class="burger" type="button" id="navToggle">
+          <span class="burger__item">Menu</span>
+        </button>
+        <nav class="nav">
           <a class="nav__item" href="/shelter/pages/main/index.html"
-            >About the shelter</a>
-          <li class="nav__item nav__item_active">Our pets</li>
-          <li class="nav__item">Help the shelter</li>
-          <li class="nav__item">Contacts</li>
+            >About the shelter</a
+          >
+          <a class="nav__item nav__item_active" href="#">Our pets</a>
+          <a class="nav__item" href="#">Help the shelter</a>
+          <a class="nav__item" href="#">Contacts</a>
         </nav>
       </header>
     </div>
@@ -30,97 +33,85 @@
             Our friends who<br />
             are looking for a house
           </h2>
-          <div class="card__block">
+          <div class="friends__block">
             <div class="friends__card">
               <img src="/shelter/assets/images/pets-katrine.png" alt="cat" />
-              <h3 class="card__name">Katrine</h3>
-              <div class="card__text">Learn more</div>
+              <h3 class="friends__name">Katrine</h3>
+              <div class="friends__text">Learn more</div>
             </div>
             <div class="friends__card">
               <img src="/shelter/assets/images/pets-jennifer.png" alt="cat" />
-              <h3 class="card__name">Jennifer</h3>
-              <div class="card__text">Learn more</div>
+              <h3 class="friends__name">Jennifer</h3>
+              <div class="friends__text">Learn more</div>
             </div>
             <div class="friends__card">
               <img src="/shelter/assets/images/pets-woody.png" alt="cat" />
-              <h3 class="card__name">Woody</h3>
-              <div class="card__text">Learn more</div>
+              <h3 class="friends__name">Woody</h3>
+              <div class="friends__text">Learn more</div>
             </div>
             <div class="friends__card friends__card--hide-sm">
               <img src="/shelter/assets/images/sophia.png" alt="Sophia" />
-              <h3 class="card__name">Sophia</h3>
-              <div class="card__text">Learn more</div>
+              <h3 class="friends__name">Sophia</h3>
+              <div class="friends__text">Learn more</div>
             </div>
             <div class="friends__card friends__card--hide-sm">
               <img src="/shelter/assets/images/timmy.png" alt="Timmy" />
-              <h3 class="card__name">Timmy</h3>
-              <div class="card__text">Learn more</div>
+              <h3 class="friends__name">Timmy</h3>
+              <div class="friends__text">Learn more</div>
             </div>
             <div class="friends__card friends__card--hide-sm">
               <img src="/shelter/assets/images/charly.png" alt="Charly" />
-              <h3 class="card__name">Charly</h3>
-              <div class="card__text">Learn more</div>
+              <h3 class="friends__name">Charly</h3>
+              <div class="friends__text">Learn more</div>
             </div>
             <div class="friends__card friends__card--hide">
               <img src="/shelter/assets/images/scarlett.png" alt="Scarlett" />
-              <h3 class="card__name">Scarlett</h3>
-              <div class="card__text">Learn more</div>
+              <h3 class="friends__name">Scarlett</h3>
+              <div class="friends__text">Learn more</div>
             </div>
             <div class="friends__card friends__card--hide">
               <img src="/shelter/assets/images/freddie.png" alt="Freddie" />
-              <h3 class="card__name">Freddie</h3>
-              <div class="card__text">Learn more</div>
+              <h3 class="friends__name">Freddie</h3>
+              <div class="friends__text">Learn more</div>
             </div>
           </div>
-          <div class="slider__nav">
-            <a class="slider__nav__item slider__nav__item--disable" href="#"
-              ><<</a
-            >
-            <a class="slider__nav__item slider__nav__item--disable" href="#"
-              ><</a
-            >
-            <a class="slider__nav__item slider__nav__item--focus" href="#">1</a>
-            <a class="slider__nav__item slider__nav__item--active" href="#"
-              >></a
-            >
-            <a class="slider__nav__item slider__nav__item--active" href="#"
-              >>></a
-            >
-          </div>
+          <section class="slider">
+            <a class="slider__item slider__item--disable" href="#"><<</a>
+            <a class="slider__item slider__item--disable" href="#"><</a>
+            <a class="slider__item slider__item--focus" href="#">1</a>
+            <a class="slider__item slider__item--active" href="#">></a>
+            <a class="slider__item slider__item--active" href="#">>></a>
+          </section>
         </div>
       </section>
     </main>
     <footer class="footer">
       <div class="container">
-        <div class="footer__wrapper">
+        <section class="footer__wrapper">
           <div class="contacts__container">
-            <h3 class="contacts__title">
-              For questions
-              and suggestions
-            </h3>
+            <h3 class="contacts__title">For questions and suggestions</h3>
             <div class="contacts__item contacts__item--mail">
-              <a href="email@shelter.com">email@shelter.com</a>
+              <a href="mailto:email@shelter.com">email@shelter.com</a>
             </div>
             <div class="contacts__item contacts__item--phone">
-              <a href="+13 674 567 75 54">+13 674 567 75 54</a>
+              <a href="tel:+136745677554">+13 674 567 75 54</a>
             </div>
           </div>
           <div class="contacts__container">
             <h3 class="contacts__title contacts__title--pin">
-              We are waiting
-              for your visit
+              We are waiting for your visit
             </h3>
             <div class="contacts__item contacts__item--pin">
-              <a href="#">1 Central Street, Boston (entrance from the store)</a>
+              <a target="_blank" href="https://goo.gl/maps/Haxhrx2xo2iDKU7d6">1 Central Street, Boston (entrance from the store)</a>
             </div>
             <div class="contacts__item contacts__item--pin">
-              <a href="#">18 South Park, London </a>
+              <a target="_blank" href="https://goo.gl/maps/bQXerXBRFL6vgd5x6">18 South Park, London </a>
             </div>
           </div>
           <div class="footer__img">
             <img src="/shelter/assets/images/footer-puppy.png" alt="puppy" />
           </div>
-        </div>
+        </section>
       </div>
     </footer>
   </body>
