@@ -1,0 +1,150 @@
+.pets {
+  background-color: #f6f6f6;
+  padding-top: 82px;
+    &__wrapper {
+      width: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__title {
+      max-width: 400px;
+      text-align: center;
+      color: #545454;
+      font-family: Georgia;
+      font-size: 2.69230rem;
+      font-weight: 400;
+      line-height: 45.5px;
+    }
+    &__title span {
+      display: block;
+      letter-spacing: 2.1px;
+    }
+    &__button {
+      width: 261px;
+      height: 52px;
+      margin-bottom: 101px;
+    }
+    &__content {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      align-items: center;
+    }
+    &__content .slider-button {
+      order: -1;
+      border: 3px solid #F1CDB3;
+      border-radius: 100%;
+      background: none;
+      width: 52px;
+      height: 52px;
+    }
+    &__content .slider-button:hover {
+      cursor: pointer;
+    }
+    &__content .slider-button_reverted {
+      transform: rotate(180deg);
+      border: 3px solid #F1CDB3;
+      border-radius: 100%;
+      background: none;
+      width: 52px;
+      height: 52px;
+    }
+    &__content .slider-button_reverted:hover {
+      cursor: pointer;
+    }
+    &__cards {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-column-gap: 89px;
+              column-gap: 89px;
+      padding: 0 52px;
+    }
+}
+
+.card {
+  width: 271px;
+  height: 435px;
+  border-radius: 9px;
+  background-color: #FAFAFA;
+  text-align: center;
+  margin: 59px 0;
+  -webkit-box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+          box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+          &:hover {
+            background-color: #FFFFFF;
+          }
+          &__name {
+            font-family: Georgia;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 23px;
+            letter-spacing: 0.06em;
+            padding-top: 27px;
+          }
+          &__text {
+            color: #292929;
+            font-family: Georgia;
+            font-size: 1.30769rem;
+            font-weight: 400;
+            letter-spacing: 1.02px;
+            line-height: 22.1px;
+            position: relative;
+            margin-top: 45px;
+          }
+          &__text::after {
+            content: "";
+            width: 187px;
+            height: 52px;
+            position: absolute;
+            border: 2px solid #F1CDB3;
+            border-radius: 100px;
+            top: -15px;
+            right: 42px;
+            z-index: 1;
+            cursor: pointer;
+          }
+}
+@media (max-width: 768px) {
+  .card--hide {
+    display: none;
+  }
+  .card {
+    margin: 59px 20px;
+  }
+  .pets__cards {
+    padding: 0;
+  }
+}
+
+@media (max-width: 320px) {
+  .card--hide-sm {
+    display: none;
+  }
+  .pets {
+    padding-top: 33px;
+    &__title {
+      font-family: Georgia;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 25px;
+      line-height: 130%;
+      margin-bottom: 0;
+      text-align: left;
+    }
+    &__content {
+      display: block;
+    }
+  }
+  .slider-button {
+    margin-left: 66px;
+    margin-right: 76px;
+  }
+  .slider-button {
+    padding-right: 305px;
+  }
+}
