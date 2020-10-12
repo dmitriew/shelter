@@ -24,3 +24,9 @@ body {
 a {
   text-decoration: none;
 }
+button:active, button:focus {
+  outline: none;
+}
+button::-moz-focus-inner {
+  border: 0;
+}
