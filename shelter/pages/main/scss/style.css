@@ -994,15 +994,16 @@ button::-moz-focus-inner {
     margin-bottom: 0;
     text-align: left;
   }
+  .pets .__wrapper {
+    display: block;
+  }
   .pets__content {
     display: block;
   }
   .slider-button {
     margin-left: 66px;
     margin-right: 76px;
-  }
-  .slider-button {
-    padding-right: 305px;
+    margin-bottom: 40px;
   }
 }
 /*# sourceMappingURL=style.css.map */

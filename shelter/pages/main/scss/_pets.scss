@@ -131,6 +131,9 @@
       margin-bottom: 0;
       text-align: left;
     }
+    .__wrapper {
+      display: block;
+    }
     &__content {
       display: block;
     }
@@ -138,8 +141,6 @@
   .slider-button {
     margin-left: 66px;
     margin-right: 76px;
-  }
-  .slider-button {
-    padding-right: 305px;
+    margin-bottom: 40px;
   }
 }
