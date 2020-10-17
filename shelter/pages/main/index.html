@@ -7,6 +7,22 @@
     <title>shelter</title>
   </head>
   <body>
+    <section class="burger__menu" hidden>
+      <ul class="burger__nav">
+        <li class="burger__nav__item burger__nav__item_active">
+          <a class="burger__nav__item" href="/shelter/pages/main/index.html"
+            >About the shelter</a
+          >
+        </li>
+        <li class="burger__nav__item">
+          <a class="burger__nav__item" href="/shelter/pages/pets/index.html"
+            >Our pets</a
+          >
+        </li>
+        <li class="burger__nav__item">Help the shelter</li>
+        <li class="burger__nav__item">Contacts</li>
+      </ul>
+    </section>
     <div class="header__wrapper">
       <div class="container">
         <header class="header">
@@ -14,16 +30,22 @@
             <h1 class="header__logo__title">Cozy House</h1>
             <p class="header__logo__subtitle">Shelter for pets in Boston</p>
           </div>
+          <!-- burger menu-->
           <button class="burger" type="button" id="navToggle">
             <span class="burger__item">Menu</span>
           </button>
+          <!-- navigation-->
           <nav class="header__nav">
-            <li class="nav__item nav__item_active">About the shelter</li>
-            <li class="nav__item">
-              <a class="nav__item" href="/shelter/pages/pets/index.html">Our pets</a>
-            </li>
-            <li class="nav__item">Help the shelter</li>
-            <li class="nav__item">Contacts</li>
+            <a
+              class="nav__item nav__item_active"
+              href="/shelter/pages/main/index.html"
+              >About the shelter</a
+            >
+            <a class="nav__item" href="/shelter/pages/pets/index.html"
+              >Our pets</a
+            >
+            <a href="javascript:void(0)" class="nav__item">Help the shelter</a>
+            <a href="javascript:void(0)" class="nav__item">Contacts</a>
           </nav>
         </header>
         <section class="intro">
@@ -34,7 +56,9 @@
               extremely wide and open heart. He or she will love you more than
               anybody else in the world, you will see!
             </div>
-            <button class="btn">Make a friend</button>
+            <form action="/shelter/pages/pets/index.html" target="_blank">
+              <button class="btn">Make a friend</button>
+            </form>
           </div>
           <div class="intro__img">
             <img
@@ -87,7 +111,7 @@
                 <div class="card">
                   <img
                     class="card__img"
-                    src="/shelter/assets/images/pets-katrine.png"
+                    src="/shelter/assets/images/katrine.png"
                     alt="cat"
                   />
                   <div class="card__name">Katrine</div>
@@ -96,7 +120,7 @@
                 <div class="card card--hide-sm">
                   <img
                     class="card__img"
-                    src="/shelter/assets/images/pets-jennifer.png"
+                    src="/shelter/assets/images/jennifer.png"
                     alt="cat"
                   />
                   <div class="card__name">Jennifer</div>
@@ -105,7 +129,7 @@
                 <div class="card card--hide">
                   <img
                     class="card__img"
-                    src="/shelter/assets/images/pets-woody.png"
+                    src="/shelter/assets/images/woody.png"
                     alt="cat"
                   />
                   <div class="card__name">Woody</div>
@@ -119,8 +143,9 @@
                 <img src="/shelter/assets/images/Arrow.svg" alt="right arrow" />
               </button>
             </div>
-
-            <button class="btn pets__button">Get to know the rest</button>
+            <form action="/shelter/pages/pets/index.html" target="_blank">
+              <button class="btn pets__button">Get to know the rest</button>
+            </form>
           </div>
         </div>
       </div>
@@ -155,31 +180,35 @@
               <div class="item__name">Shampoos</div>
             </div>
             <div class="help__item help__item--secondblock">
-<div>
-  <img src="/shelter/assets/images/Vector6.svg" alt="Vitamins" />
-</div>
+              <div>
+                <img src="/shelter/assets/images/Vector6.svg" alt="Vitamins" />
+              </div>
               <div class="item__name">Vitamins</div>
             </div>
-            <div class="help__item help__item--secondblock ">
-<div>
-  <img src="/shelter/assets/images/Vector7.svg" alt="Medicines" />
-</div>
+            <div class="help__item help__item--secondblock">
+              <div>
+                <img src="/shelter/assets/images/Vector7.svg" alt="Medicines" />
+              </div>
               <div class="item__name">Medicines</div>
             </div>
             <div class="help__item help__item--secondblock">
-<div>              <img
-  src="/shelter/assets/images/Vector8.svg"
-  alt="Collars / leashes"
-/></div>
-              <div class="item__name help__item--secondblock">Collars / leashes</div>
+              <div>
+                <img
+                  src="/shelter/assets/images/Vector8.svg"
+                  alt="Collars / leashes"
+                />
+              </div>
+              <div class="item__name help__item--secondblock">
+                Collars / leashes
+              </div>
             </div>
             <div class="help__item help__item--secondblock">
-<div>
-  <img
-  src="/shelter/assets/images/Vector9.svg"
-  alt="Sleeping areas"
-/>
-</div>
+              <div>
+                <img
+                  src="/shelter/assets/images/Vector9.svg"
+                  alt="Sleeping areas"
+                />
+              </div>
               <div class="item__name">Sleeping areas</div>
             </div>
           </div>
