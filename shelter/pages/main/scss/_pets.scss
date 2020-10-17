@@ -6,6 +6,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      overflow: hidden;
     }
     &__title {
       max-width: 400px;
@@ -26,8 +27,6 @@
       margin-bottom: 101px;
     }
     &__content {
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
       align-items: center;
     }
@@ -35,6 +34,7 @@
       order: -1;
       border: 3px solid #F1CDB3;
       border-radius: 100%;
+      padding: 0;
       background: none;
       width: 52px;
       height: 52px;
@@ -46,6 +46,7 @@
       transform: rotate(180deg);
       border: 3px solid #F1CDB3;
       border-radius: 100%;
+      padding: 0;
       background: none;
       width: 52px;
       height: 52px;
@@ -57,6 +58,7 @@
       display: flex;
       column-gap: 89px;
       padding: 0 52px;
+      overflow: hidden;
     }
 }
 
@@ -102,45 +104,83 @@
             cursor: pointer;
           }
 }
-@media (max-width: 768px) {
-  .card {
-    margin: 59px 20px;
+@media (max-width: 1200px) {
+  .card--hide {
+    display: none;
   }
+}
+
+@media (max-width: 768px) {
   .card--hide {
     display: none;
   }
   .pets__cards {
-    column-gap: 0;
-    justify-content: center;
+    display: flex;
+    justify-content: space-between;
     padding: 0 0;
+    column-gap: 0;
+  }
+  .card {
+    margin: 59px 16px;
   }
 }
-
-@media (max-width: 320px) {
+@media (max-width: 750px) {
   .card--hide-sm {
     display: none;
   }
+}
+@media (max-width: 490px) {
   .pets {
     padding-top: 33px;
     &__title {
-      font-family: Georgia;
-      font-style: normal;
-      font-weight: normal;
       font-size: 25px;
       line-height: 130%;
+      text-align: center;
       margin-bottom: 0;
-      text-align: left;
+    }
+    &__title span {
+      letter-spacing: 1.5px;
     }
     .__wrapper {
       display: block;
     }
     &__content {
+      margin-top: 0;
+      display: block;
+    }
+  }
+}
+@media (max-width: 320px) {
+  .card--hide-sm {
+    display: none;
+  }
+  .card {
+    margin: 0;
+    margin-top: 42px;
+  }
+  .pets {
+    padding-top: 33px;
+    &__title {
+      font-size: 25px;
+      line-height: 130%;
+      text-align: center;
+      margin-bottom: 0;
+    }
+    &__title span {
+      letter-spacing: 1.5px;
+    }
+    .__wrapper {
+      display: block;
+    }
+    &__content {
+      margin-top: 0;
       display: block;
     }
   }
   .slider-button {
-    margin-left: 66px;
-    margin-right: 76px;
-    margin-bottom: 40px;
+    margin: 20px 77px 42px 43px;
+  }
+  .pets__button {
+    margin-bottom: 32px;
   }
 }

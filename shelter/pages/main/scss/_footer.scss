@@ -4,7 +4,7 @@
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      padding-top: 35px;
+      padding-top: 38px;
       padding-bottom:0;
     }
 }
@@ -54,6 +54,7 @@
       font-weight: normal;
       font-size: 20px;
       letter-spacing: 0.06em;
+      line-height: 22px;
       color: #F1CDB3;
       display: block;
       padding-left: 48px;
@@ -61,8 +62,8 @@
       position: relative;
       & a {
         color: #F1CDB3;
-        padding-left: 14px;
-        line-height: 28px;
+        padding-left: 12px;
+        line-height: 29px;
       }
     }
     &__item--mail::after {
@@ -89,7 +90,7 @@
     }
     &__item--pin {
       display: block;
-      padding-bottom: 40px;
+      padding-bottom: 38px;
       padding-left: 41px;
       margin-left: 0px;
       &:last-child::before {

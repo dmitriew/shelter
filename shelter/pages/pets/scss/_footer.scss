@@ -1,16 +1,16 @@
 .footer {
   background: url('/shelter/assets/images/noise_transparent@2x.png'), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding-top: 40px;
+    }
+    &__img {
+      margin-left: 24px;
+    }
 }
-.footer__wrapper {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding-top: 40px;
-}
-.footer__img {
-  margin-left: 24px;
-}
-@media (max-width: 768px) {
+@media (max-width: 1001px) {
   .footer__wrapper {
     padding: 12px 34px 0;
   }
@@ -24,7 +24,6 @@
     padding: 14px 0 0;
   }
   .footer__img img{
-    padding-top: 33px;
     padding-left: 20px;
     width: 94%;
   }
@@ -39,7 +38,7 @@
   font-size: 35px;
   line-height: 130%;
   letter-spacing: 0.06em;
-  padding-top: 19px;
+  padding-top: 17px;
   padding-bottom: 40px;
   padding-left: 0;
   margin-left: 0;
@@ -48,12 +47,13 @@
 @media (max-width: 320px) {
   .contacts__title {
     text-align: center;
-    padding-top: 16px;
+    padding-top: 15px;
     padding-bottom: 42px;
   }
 }
 .contacts__title--pin {
-  padding-bottom: 30px;
+  padding-top: 17px;
+  padding-bottom: 33px;
 }
 .contacts__item {
   font-family: Georgia;
@@ -68,18 +68,31 @@
   position: relative;
   & a {
     color: #F1CDB3;
-    padding-left: 14px;
-    line-height: 28px;
+    padding-left: 13px;
+    line-height: 30px;
   }
 }
 @media (max-width: 768px) {
   .contacts__item {
-    padding-bottom: 44px;
+    padding-bottom: 43px;
   }
+  .contacts__title--pin {
+    padding-top: 20px;
+    padding-bottom: 31px;
+}
 }
 @media (max-width: 320px) {
   .contacts__item {
-    margin-left: 10px;
+    margin-left: 24px;
+  }
+  .contacts__title--pin {
+    padding-top: 13px;
+    padding-bottom: 40px;
+}
+}
+@media (max-width: 725px) {
+  .footer__wrapper {
+    justify-content: center;
   }
 }
 .contacts__item--mail::after {
@@ -103,11 +116,6 @@
   position: absolute;
   background-image: url("/shelter/assets/images/phone.png");
   background-repeat: no-repeat;
-}
-@media (max-width: 320px) {
-  .contacts__item--phone {
-    padding-bottom: 29px;
-  }
 }
 .contacts__item--pin {
   display: block;
@@ -133,4 +141,21 @@
   position: absolute;
   background-image: url("/shelter/assets/images/pin.png");
   background-repeat: no-repeat;
+}
+@media (max-width: 320px) {
+  .contacts__item--phone {
+    margin-left: 28px;
+    padding-bottom: 27px;
+  }
+  .contacts__title {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 25px;
+  }
+  .contacts__item--pin {
+    padding-bottom: 45px;
+  }
+  .contacts__item--pin:last-child {
+    padding-bottom: 23px;
+  }
 }
