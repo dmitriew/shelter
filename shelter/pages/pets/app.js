@@ -1,5 +1,16 @@
 const petList = [
         {
+          "name": "Katrine",
+          "img": "../../assets/images/katrine.png",
+          "type": "Cat",
+          "breed": "British Shorthair",
+          "description": "Katrine is a beautiful girl. She is as soft as the finest velvet with a thick lush fur. Will love you until the last breath she takes as long as you are the one. She is picky about her affection. She loves cuddles and to stretch into your hands for a deeper relaxations.",
+          "age": "6 months",
+          "inoculations": ["panleukopenia"],
+          "diseases": ["none"],
+          "parasites": ["none"]
+        },
+        {
           "name": "Jennifer",
           "img": "../../assets/images/jennifer.png",
           "type": "Dog",
@@ -7,17 +18,6 @@ const petList = [
           "description": "Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.",
           "age": "2 months",
           "inoculations": ["none"],
-          "diseases": ["none"],
-          "parasites": ["none"]
-        },
-        {
-          "name": "Sophia",
-          "img": "../../assets/images/sophia.png",
-          "type": "Dog",
-          "breed": "Shih tzu",
-          "description": "Sophia here and I'm looking for my forever home to live out the best years of my life. I am full of energy. Everyday I'm learning new things, like how to walk on a leash, go potty outside, bark and play with toys and I still need some practice.",
-          "age": "1 month",
-          "inoculations": ["parvovirus"],
           "diseases": ["none"],
           "parasites": ["none"]
         },
@@ -33,24 +33,13 @@ const petList = [
           "parasites": ["none"]
         },
         {
-          "name": "Scarlett",
-          "img": "../../assets/images/scarlett.png",
+          "name": "Sophia",
+          "img": "../../assets/images/sophia.png",
           "type": "Dog",
-          "breed": "Jack Russell Terrier",
-          "description": "Scarlett is a happy, playful girl who will make you laugh and smile. She forms a bond quickly and will make a loyal companion and a wonderful family dog or a good companion for a single individual too since she likes to hang out and be with her human.",
-          "age": "3 months",
-          "inoculations": ["parainfluenza"],
-          "diseases": ["none"],
-          "parasites": ["none"]
-        },
-        {
-          "name": "Katrine",
-          "img": "../../assets/images/katrine.png",
-          "type": "Cat",
-          "breed": "British Shorthair",
-          "description": "Katrine is a beautiful girl. She is as soft as the finest velvet with a thick lush fur. Will love you until the last breath she takes as long as you are the one. She is picky about her affection. She loves cuddles and to stretch into your hands for a deeper relaxations.",
-          "age": "6 months",
-          "inoculations": ["panleukopenia"],
+          "breed": "Shih tzu",
+          "description": "Sophia here and I'm looking for my forever home to live out the best years of my life. I am full of energy. Everyday I'm learning new things, like how to walk on a leash, go potty outside, bark and play with toys and I still need some practice.",
+          "age": "1 month",
+          "inoculations": ["parvovirus"],
           "diseases": ["none"],
           "parasites": ["none"]
         },
@@ -66,17 +55,6 @@ const petList = [
           "parasites": ["none"]
         },
         {
-          "name": "Freddie",
-          "img": "../../assets/images/freddie.png",
-          "type": "Cat",
-          "breed": "British Shorthair",
-          "description": "Freddie is a little shy at first, but very sweet when he warms up. He likes playing with shoe strings and bottle caps. He is quick to learn the rhythms of his human’s daily life. Freddie has bounced around a lot in his life, and is looking to find his forever home.",
-          "age": "2 months",
-          "inoculations": ["rabies"],
-          "diseases": ["none"],
-          "parasites": ["none"]
-        },
-        {
           "name": "Charly",
           "img": "../../assets/images/charly.png",
           "type": "Dog",
@@ -86,10 +64,31 @@ const petList = [
           "inoculations": ["bordetella bronchiseptica", "leptospirosis"],
           "diseases": ["deafness", "blindness"],
           "parasites": ["lice", "fleas"]
+        },
+        {
+          "name": "Scarlett",
+          "img": "../../assets/images/scarlett.png",
+          "type": "Dog",
+          "breed": "Jack Russell Terrier",
+          "description": "Scarlett is a happy, playful girl who will make you laugh and smile. She forms a bond quickly and will make a loyal companion and a wonderful family dog or a good companion for a single individual too since she likes to hang out and be with her human.",
+          "age": "3 months",
+          "inoculations": ["parainfluenza"],
+          "diseases": ["none"],
+          "parasites": ["none"]
+        },
+        {
+          "name": "Freddie",
+          "img": "../../assets/images/freddie.png",
+          "type": "Cat",
+          "breed": "British Shorthair",
+          "description": "Freddie is a little shy at first, but very sweet when he warms up. He likes playing with shoe strings and bottle caps. He is quick to learn the rhythms of his human’s daily life. Freddie has bounced around a lot in his life, and is looking to find his forever home.",
+          "age": "2 months",
+          "inoculations": ["rabies"],
+          "diseases": ["none"],
+          "parasites": ["none"]
         }
       ],
       modalWindowContent = document.querySelector('.modal__content'),
-      showModal = document.querySelectorAll('.friends__text'),
       headerLogoLink = document.querySelector('.header__logo'),
       closeBtn = document.querySelector('.modal__close'),
       modalWindow = document.querySelector('.modal'),
@@ -99,7 +98,7 @@ const petList = [
       burgerList = document.querySelector('.burger__menu'),
       burgerUl = document.querySelector('.burger__nav'),
       burgerHome = document.querySelector('#burger__nav__home');
-
+      let showModal = document.querySelectorAll('.friends__text');
 
 headerLogoLink.addEventListener('click', () => {
   window.open('/shelter/pages/main/index.html');
@@ -119,7 +118,7 @@ function calcScroll() {
 
 showModal.forEach(item => {
   item.addEventListener('click', (event) => {
-    inputData(`${item.getAttribute('something')}`);
+    modalInputData(`${item.getAttribute('something')}`);
     modalWindow.style.display = 'flex';
     document.body.style.overflow = 'hidden';
     document.body.style.marginRight = `${scroll}px`;
@@ -133,9 +132,7 @@ closeModal = () => {
   document.body.style.marginRight = `0px`;
 }
 
-closeBtn.addEventListener('click', () => {
-  closeModal();
-})
+closeBtn.addEventListener('click', closeModal);
 
 modalWindow.addEventListener('click', (event) => {
   if (event.target === modalWindow || event.target === container) {
@@ -143,15 +140,14 @@ modalWindow.addEventListener('click', (event) => {
   }
     });
 
-
-inputData = (petData) => {
+modalInputData = (petData) => {
   for (let index = 0; index < petList.length; index++) {
     
     if (petList[index].name == `${petData}`) {
   modalWindowContent.innerHTML =       `
   
   <div class="modal__img">
-     <img src="${petList[index].img}" alt="">
+     <img src="${petList[index].img}" alt="${petList[index].type}">
   </div>
   <div class="modal__desc">
      <h3 class="desc__name">${petList[index].name}</h3>
@@ -166,6 +162,7 @@ inputData = (petData) => {
   </div>
   
   `;
+  
   }
   };
 };
@@ -210,26 +207,115 @@ burgerHome.addEventListener('click', (event) => {
 });
 
 
-// pagination
+const nextBtn = document.querySelector('#next'),
+      pPositon = document.querySelector('#focus'),
+      prevBtn = document.querySelector('#prev'),
+      doubleprev = document.querySelector('#doubleprev'),
+      friendsBlock = document.querySelector('.friends__block'),
+      doublenext = document.querySelector('#doublenext');
+let arrayStack = [petList],
+    count = 0,
+    positonPage = 1;
+
+
+for (let index = 0; index < 5; index++) {
+  var shuffledArr = petList.slice().sort(function(){
+    return Math.random() - 0.5;
+  });
+  arrayStack.push(shuffledArr);
+};
+
+pushPetsStack = (random) => {
+
+friendsBlock.innerHTML = '';
+  for (let index = 0; index < 8; index++) {
+    friendsBlock.insertAdjacentHTML('beforeend',       `
+    <div class="friends__card">
+    <img src="${random[index].img}" alt="${random[index].type}" />
+    <h3 class="friends__name">${random[index].name}</h3>
+    <div class="friends__text" something="${random[index].name}">Learn more</div>
+    </div>
+`);
+};
+showModal = document.querySelectorAll('.friends__text');
+showModal.forEach(item => {
+  item.addEventListener('click', (event) => {
+    modalInputData(`${item.getAttribute('something')}`);
+    modalWindow.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    document.body.style.marginRight = `${scroll}px`;
+    modalWindow.style.animation = 'modal-show 0.5s';
+  });
+});
+};
+
+pagePosition = (pageNumber = 1) => {
+  if (pageNumber > 1) {
+    prevBtn.classList.add('slider__item--active')
+    prevBtn.classList.remove('slider__item--disable')
+    doubleprev.classList.add('slider__item--active')
+    doubleprev.classList.remove('slider__item--disable')
+  } else {
+    prevBtn.classList.remove('slider__item--active')
+    prevBtn.classList.add('slider__item--disable')
+    doubleprev.classList.remove('slider__item--active')
+    doubleprev.classList.add('slider__item--disable')
+  }
+  if (pageNumber === 6) {
+    nextBtn.classList.remove('slider__item--active');
+    nextBtn.classList.add('slider__item--disable');
+    doublenext.classList.remove('slider__item--active');
+    doublenext.classList.add('slider__item--disable');
+  } else {
+    nextBtn.classList.add('slider__item--active');
+    nextBtn.classList.remove('slider__item--disable');
+    doublenext.classList.add('slider__item--active');
+    doublenext.classList.remove('slider__item--disable');
+  }
+
+  if (pageNumber >= 1 && positonPage === pageNumber && pageNumber < 7) {
+    pPositon.innerHTML = pageNumber;
+  }
+};
 
 
 
+nextBtn.addEventListener('click', (e) => {
+  if (e.target) {
+    e.preventDefault();
+if (nextBtn.classList.contains('slider__item--active')) {
+  pagePosition(positonPage += 1);
+  pushPetsStack(arrayStack[count += 1]);
+}
+}
+});
+
+prevBtn.addEventListener('click', (e) => {
+  if (e.target) {
+    e.preventDefault();
+  if (prevBtn.classList.contains('slider__item--active')) {
+    pagePosition(positonPage -= 1);
+    pushPetsStack(arrayStack[count -= 1]);
+    }
+  }});
+
+doubleprev.addEventListener('click', (e) => {
+  if (e.target) {
+    e.preventDefault();
+    pagePosition(positonPage = 1);
+    pushPetsStack(arrayStack[0])
+    count = 0;
+}});
+
+doublenext.addEventListener('click', (e) => {
+  if (e.target) {
+    e.preventDefault();
+    pagePosition(positonPage = 6);
+    pushPetsStack(arrayStack[5])
+    count = 5;
+}});
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-inputData();
+pagePosition();
+modalInputData();
 burgerMenu();
