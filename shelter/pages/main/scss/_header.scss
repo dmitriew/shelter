@@ -1,5 +1,5 @@
 .header__wrapper {
-  background: url('/shelter/assets/images/noise_transparent@2x.png'), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+  background: url('../../../assets/images/noise_transparent@2x.png'), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
   background-repeat: repeat;
   background-position-x: center;
   width: 100%;
@@ -20,9 +20,9 @@
     height: 823px;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 420px) {
   .header__wrapper {
-    height: 823px;
+    height: 802px;
   }
 }
 .header {
@@ -32,7 +32,6 @@
       display: flex;
       flex-direction: column;
       padding-top: 61px;
-      z-index: 10;
     }
     &__logo__title {
       color: #f1cdb3;
@@ -58,8 +57,13 @@
     padding-top:31px
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 540px) {
   .header__logo {
     padding-top:22px
+  }
+}
+@media (max-width: 320px) {
+  .header__logo {
+    z-index: 10;
   }
 }

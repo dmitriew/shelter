@@ -113,6 +113,15 @@
     width: 83%;
   }
 }
-
-
+@media (max-width: 420px) {
+  .intro__img {
+    margin-top: 53px;
+  }
+}
+@media (max-width: 320px) {
+  .intro__img img {
+    margin-left: 0;
+    width: 100%;
+  }
+}
 

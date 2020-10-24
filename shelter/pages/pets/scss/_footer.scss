@@ -1,5 +1,5 @@
 .footer {
-  background: url('/shelter/assets/images/noise_transparent@2x.png'), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+  background: url('../../../assets/images/noise_transparent@2x.png'), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
     &__wrapper {
       display: flex;
       justify-content: space-between;
@@ -103,7 +103,7 @@
   top: 0;
   left: 0;
   position: absolute;
-  background-image: url("/shelter/assets/images/mail.png");
+  background-image: url("../../../assets/images/mail.png");
   background-repeat: no-repeat;
 }
 .contacts__item--phone::after {
@@ -114,7 +114,7 @@
   top: 0;
   left: 0;
   position: absolute;
-  background-image: url("/shelter/assets/images/phone.png");
+  background-image: url("../../../assets/images/phone.png");
   background-repeat: no-repeat;
 }
 .contacts__item--pin {
@@ -139,7 +139,7 @@
   bottom: 6px;
   left: 0;
   position: absolute;
-  background-image: url("/shelter/assets/images/pin.png");
+  background-image: url("../../../assets/images/pin.png");
   background-repeat: no-repeat;
 }
 @media (max-width: 320px) {
