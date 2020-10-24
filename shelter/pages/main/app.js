@@ -125,6 +125,16 @@ if (event.target === modalWindow || event.target === container) {
 }
 });
 
+modalWindowContent.addEventListener('mouseleave',()=>{
+  const closeBtn = document.querySelector("body > section.modal > div > div > div > button");
+  closeBtn.style.backgroundColor ='#FDDCC4'
+})
+
+modalWindowContent.addEventListener('mouseenter',(event)=>{
+    const closeBtn = document.querySelector("body > section.modal > div > div > div > button");
+    closeBtn.style.backgroundColor = null
+})
+
 window.addEventListener('resize', () => {
   if (burgerMenu || showModal) {
     closeBurger();
