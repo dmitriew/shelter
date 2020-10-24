@@ -1,7 +1,6 @@
 .header__nav {
   display: flex;
   align-items: center;
-  column-gap: 36px;
 }
 @media (max-width: 767px) {
   .header__nav {
@@ -16,9 +15,13 @@
   line-height: 160%;
   list-style: none;
   margin-top: 54px;
+  margin-right: 36px;
   &:hover {
     cursor: pointer;
     color: #FAFAFA;
+  }
+  &:last-child {
+    margin-right: 0;
   }
 }
 @media (max-width: 768px) {

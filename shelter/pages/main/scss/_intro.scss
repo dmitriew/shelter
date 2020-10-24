@@ -113,6 +113,11 @@
     width: 83%;
   }
 }
+@media (max-width: 414px) {
+  .intro__img img {
+    width: 84%;
+  }
+}
 @media (max-width: 420px) {
   .intro__img {
     margin-top: 53px;
