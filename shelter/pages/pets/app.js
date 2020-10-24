@@ -90,7 +90,6 @@ const petList = [
       ],
       modalWindowContent = document.querySelector('.modal__content'),
       headerLogoLink = document.querySelector('.header__logo'),
-      closeBtn = document.querySelector('.modal__close'),
       modalWindow = document.querySelector('.modal'),
       container = document.querySelector('.container'),
       scroll = calcScroll(),
@@ -98,11 +97,7 @@ const petList = [
       burgerList = document.querySelector('.burger__menu'),
       burgerUl = document.querySelector('.burger__nav'),
       burgerHome = document.querySelector('#burger__nav__home');
-      let showModal = document.querySelectorAll('.friends__text');
-
-headerLogoLink.addEventListener('click', () => {
-  window.open('/shelter/pages/main/index.html');
-});
+      let showModal = document.querySelectorAll('.friends__card');
 
 function calcScroll() {
   let div = document.createElement('div');
@@ -126,13 +121,18 @@ showModal.forEach(item => {
   });
 });
 
-closeModal = () => {
+const closeModal = () => {
   modalWindow.style.display = 'none';
   document.body.style.overflow = 'visible';
   document.body.style.marginRight = `0px`;
-}
+};
 
-closeBtn.addEventListener('click', closeModal);
+window.addEventListener('resize', () => {
+  if (burgerMenu || showModal) {
+    closeBurger();
+    closeModal();
+  }
+});
 
 modalWindow.addEventListener('click', (event) => {
   if (event.target === modalWindow || event.target === container) {
@@ -140,7 +140,7 @@ modalWindow.addEventListener('click', (event) => {
   }
     });
 
-modalInputData = (petData) => {
+const modalInputData = (petData) => {
   for (let index = 0; index < petList.length; index++) {
     
     if (petList[index].name == `${petData}`) {
@@ -160,14 +160,20 @@ modalInputData = (petData) => {
         <li class="desc__info__item"><span>Parasites:</span> ${petList[index].parasites}</li>
      </ul>
   </div>
-  
+  <button class="modal__close">
+  <i class="fas fa-times"></i>
+  </button>
   `;
   
   }
   };
+  const closeBtn = document.querySelector("body > section.modal > div > div > div > button");
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => closeModal());
+  }
 };
 
-closeBurger = () => {
+const closeBurger = () => {
   burgerUl.style.animationDirection = 'reverse';
   setTimeout('burgerList.setAttribute("hidden", "true")', 1000);
   burgerUl.style.animation = 'burger-hide 1s';
@@ -177,7 +183,7 @@ closeBurger = () => {
 }
 
 
-burgerMenu = () => {
+const burgerMenu = () => {
   burger.addEventListener('click', () => {
     if (burgerList.hasAttribute('hidden')) {
       document.body.style.marginRight = `${scroll}px`;
@@ -213,31 +219,49 @@ const nextBtn = document.querySelector('#next'),
       doubleprev = document.querySelector('#doubleprev'),
       friendsBlock = document.querySelector('.friends__block'),
       doublenext = document.querySelector('#doublenext');
-let arrayStack = [petList],
+let arrayStack = []
     count = 0,
     positonPage = 1;
 
 
-for (let index = 0; index < 5; index++) {
+for (let index = 0; index < 6; index++) {
   var shuffledArr = petList.slice().sort(function(){
     return Math.random() - 0.5;
   });
   arrayStack.push(shuffledArr);
 };
 
-pushPetsStack = (random) => {
+const pushPetsStack = (random) => {
 
 friendsBlock.innerHTML = '';
   for (let index = 0; index < 8; index++) {
-    friendsBlock.insertAdjacentHTML('beforeend',       `
-    <div class="friends__card">
+    if (index === 6 || index === 7) {
+      friendsBlock.insertAdjacentHTML('beforeend',       `
+    <div class="friends__card friends__card--hide" something="${random[index].name}">
     <img src="${random[index].img}" alt="${random[index].type}" />
     <h3 class="friends__name">${random[index].name}</h3>
-    <div class="friends__text" something="${random[index].name}">Learn more</div>
+    <div class="friends__text">Learn more</div>
     </div>
 `);
+    } else if (index === 3 || index === 4 || index === 5) {
+      friendsBlock.insertAdjacentHTML('beforeend',       `
+    <div class="friends__card friends__card--hide-sm" something="${random[index].name}">
+    <img src="${random[index].img}" alt="${random[index].type}" />
+    <h3 class="friends__name">${random[index].name}</h3>
+    <div class="friends__text">Learn more</div>
+    </div>
+`);
+    } else {
+      friendsBlock.insertAdjacentHTML('beforeend',       `
+      <div class="friends__card" something="${random[index].name}">
+      <img src="${random[index].img}" alt="${random[index].type}" />
+      <h3 class="friends__name">${random[index].name}</h3>
+      <div class="friends__text">Learn more</div>
+      </div>
+  `);
+    }
 };
-showModal = document.querySelectorAll('.friends__text');
+showModal = document.querySelectorAll('.friends__card');
 showModal.forEach(item => {
   item.addEventListener('click', (event) => {
     modalInputData(`${item.getAttribute('something')}`);
@@ -249,7 +273,7 @@ showModal.forEach(item => {
 });
 };
 
-pagePosition = (pageNumber = 1) => {
+const pagePosition = (pageNumber = 1) => {
   if (pageNumber > 1) {
     prevBtn.classList.add('slider__item--active')
     prevBtn.classList.remove('slider__item--disable')
@@ -315,7 +339,7 @@ doublenext.addEventListener('click', (e) => {
     count = 5;
 }});
 
-
+pushPetsStack(arrayStack[0]);
 pagePosition();
 modalInputData();
 burgerMenu();

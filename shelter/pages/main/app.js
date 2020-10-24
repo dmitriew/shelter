@@ -1,3 +1,4 @@
+"use strict";
 const petList = [
   {
     "name": "Jennifer",
@@ -90,7 +91,6 @@ const petList = [
 ],
       modalWindowContent = document.querySelector('.modal__content'),
       headerLogoLink = document.querySelector('.header__logo'),
-      closeBtn = document.querySelector('.modal__close'),
       modalWindow = document.querySelector('.modal'),
       container = document.querySelector('.container'),
       scroll = calcScroll(),
@@ -98,7 +98,7 @@ const petList = [
       burgerList = document.querySelector('.burger__menu'),
       burgerUl = document.querySelector('.burger__nav'),
       burgerHome = document.querySelector('#burger__nav__home');
-let showModal = document.querySelectorAll('.card__text');
+let showModal = document.querySelectorAll('.card');
 
 
 function calcScroll() {
@@ -113,17 +113,11 @@ function calcScroll() {
   return scrollWidth;
 };
 
-
-
-closeModal = () => {
+const closeModal = () => {
   modalWindow.style.display = 'none';
   document.body.style.overflow = 'visible';
   document.body.style.marginRight = `0px`;
-}
-
-closeBtn.addEventListener('click', () => {
-  closeModal();
-})
+};
 
 modalWindow.addEventListener('click', (event) => {
 if (event.target === modalWindow || event.target === container) {
@@ -131,13 +125,18 @@ if (event.target === modalWindow || event.target === container) {
 }
 });
 
+window.addEventListener('resize', () => {
+  if (burgerMenu || showModal) {
+    closeBurger();
+    closeModal();
+  }
+})
 
-inputData = (petData) => {
+const inputData = petData => {
 for (let index = 0; index < petList.length; index++) {
 
 if (petList[index].name == `${petData}`) {
   modalWindowContent.innerHTML =       `
-
   <div class="modal__img">
   <img src="${petList[index].img}" alt="${petList[index].type}">
   </div>
@@ -152,13 +151,19 @@ if (petList[index].name == `${petData}`) {
     <li class="desc__info__item"><span>Parasites:</span> ${petList[index].parasites}</li>
   </ul>
   </div>
-
+  <button class="modal__close">
+  <i class="fas fa-times"></i>
+  </button>
   `;
   }
   };
+  const closeBtn = document.querySelector("body > section.modal > div > div > div > button");
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => closeModal());
+  }
 };
 
-closeBurger = () => {
+const closeBurger = () => {
   burgerUl.style.animationDirection = 'reverse';
   setTimeout('burgerList.setAttribute("hidden", "true")', 1000);
   burgerUl.style.animation = 'burger-hide 1s';
@@ -167,7 +172,7 @@ closeBurger = () => {
   document.body.style.marginRight = `0px`;
 };
 
-burgerMenu = () => {
+const burgerMenu = () => {
 burger.addEventListener('click', () => {
   if (burgerList.hasAttribute('hidden')) {
     document.body.style.marginRight = `${scroll}px`;
@@ -197,67 +202,82 @@ burgerHome.addEventListener('click', (event) => {
 const rightBTN = document.querySelector('.slider-button_reverted');
 const leftBTN = document.querySelector('.slider-button');
 let petsCARDS = document.querySelector('.pets__cards');
-let petsMassive = [4,0,2];
+let arrpets = [];
 
-function randomInteger(min, max) {
-  let rand = min + Math.random() * (max + 1 - min);
-    return Math.floor(rand);
-};
+const randomPets = () => {
+  while (arrpets.length < 3) {
+    let randomPet = Math.floor(Math.random() * Math.floor(petList.length))
+    if (!arrpets.includes(randomPet)) {
+      arrpets.push(randomPet)
+    }
+  }
+}
+
+const generatePets = () => {
+  const oldPets = arrpets
+  arrpets = [];
+  while(arrpets.length < 3) {
+    let randomPet = Math.floor(Math.random() * Math.floor(petList.length))
+    if (!arrpets.includes(randomPet) && !oldPets.includes(randomPet)) {
+      arrpets.push(randomPet)
+    }
+  }
+}
 
 rightBTN.addEventListener('click', (e) => {
   if (e.target) {
   e.preventDefault();
-
-    petsMassive.push(randomInteger(0, 6));
-    petsMassive.shift();
-
-  clickSLIDERdadd(petsMassive[0],petsMassive[1],petsMassive[2]);
+  petsCARDS.style.animation = 'showSlideRight 1s';
+  generatePets()
+  clickSLIDERdadd(arrpets[0],arrpets[1],arrpets[2]);
   };
 });
 
 leftBTN.addEventListener('click', (e) => {
   if (e.target) {
   e.preventDefault();
-
-  petsMassive.unshift(randomInteger(0, 6));
-  petsMassive.pop();
-  
-  clickSLIDERdadd(petsMassive[0],petsMassive[1],petsMassive[2]);
+  petsCARDS.style.animation = 'showSlideLeft 1s';
+  generatePets()
+  clickSLIDERdadd(arrpets[0],arrpets[1],arrpets[2]);
   };
 });
 
-clickSLIDERdadd = (a,b,c) => {
+petsCARDS.addEventListener('animationend', () => {
+  petsCARDS.style.animation = '';
+})
+
+const clickSLIDERdadd = (a,b,c) => {
   petsCARDS.innerHTML =        `
-  <div class="card">
+  <div class="card" something="${petList[a].name}">
   <img
     class="card__img"
     src="${petList[a].img}"
     alt="${petList[a].type}"
   />
   <div class="card__name">${petList[a].name}</div>
-  <div class="card__text" something="${petList[a].name}">Learn more</div>
+  <div class="card__text">Learn more</div>
 
 </div>
-<div class="card card--hide-sm">
+<div class="card card--hide-sm" something="${petList[b].name}">
   <img
     class="card__img"
     src="${petList[b].img}"
     alt="${petList[b].type}"
   />
   <div class="card__name">${petList[b].name}</div>
-  <div class="card__text" something="${petList[b].name}">Learn more</div>
+  <div class="card__text">Learn more</div>
 </div>
-<div class="card card--hide">
+<div class="card card--hide"  something="${petList[c].name}">
   <img
     class="card__img"
     src="${petList[c].img}"
     alt="${petList[c].type}"
   />
   <div class="card__name">${petList[c].name}</div>
-  <div class="card__text" something="${petList[c].name}">Learn more</div>
+  <div class="card__text">Learn more</div>
 </div>
 `
-showModal = document.querySelectorAll('.card__text');
+showModal = document.querySelectorAll('.card');
   showModal.forEach(item => {
   item.addEventListener('click', (event) => {
   inputData(`${item.getAttribute('something')}`);
@@ -271,4 +291,7 @@ showModal = document.querySelectorAll('.card__text');
 
 inputData();
 burgerMenu();
-clickSLIDERdadd(4,0,2);
+randomPets();
+generatePets();
+clickSLIDERdadd(arrpets[0],arrpets[1],arrpets[2]);
+

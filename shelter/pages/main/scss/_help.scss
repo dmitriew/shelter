@@ -47,7 +47,7 @@
   letter-spacing: 1.2px;
   line-height: 27px;
 }
-@media (max-width: 320px) {
+@media (max-width: 420px) {
   .help__title {
     font-size: 25px;
     padding-top: 32px;
@@ -61,8 +61,5 @@
     width: 150px;
     min-height: 110px;
     text-align: center;
-  }
-  .help__item img {
-    width: 30%;
   }
 }

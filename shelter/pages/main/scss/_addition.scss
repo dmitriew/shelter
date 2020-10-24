@@ -40,7 +40,10 @@
       padding-top: 20px;
     }
 }
-
+.btn__link:hover {
+  background-color:  #FDDCC4;
+  border-color: #FDDCC4;
+}
 @media (max-width: 768px) {
   .addition__content {
     justify-content: center;
@@ -50,7 +53,7 @@
     margin-bottom: 95px;
   }
   .addition__subtitle {
-    margin-bottom: 22px;
+    margin-bottom: 20px;
   }
 }
 .btn__link {
@@ -80,7 +83,7 @@
   height: 24px;
   top: 7px;
   left: 14px;
-  background-image: url("/shelter/assets/images/credit-card.png");
+  background-image: url("../../../assets/images/credit-card.png");
 }
 }
 @media (max-width: 550px) {
@@ -92,7 +95,7 @@
     line-height: 130%;
   }
   .addition__img img {
-    width: 80%;
+    width: 100%;
     margin: 0;
   }
   .btn__link {
@@ -100,7 +103,7 @@
     font-family: Georgia;
     font-style: normal;
     font-weight: normal;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 110%;
   }
   .addition__subtitle {
