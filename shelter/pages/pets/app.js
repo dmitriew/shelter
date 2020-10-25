@@ -140,6 +140,16 @@ modalWindow.addEventListener('click', (event) => {
   }
     });
 
+modalWindowContent.addEventListener('mouseleave',()=>{
+  const closeBtn = document.querySelector("body > section.modal > div > div > div > button");
+  closeBtn.style.backgroundColor ='#FDDCC4'
+})
+
+modalWindowContent.addEventListener('mouseenter',(event)=>{
+    const closeBtn = document.querySelector("body > section.modal > div > div > div > button");
+    closeBtn.style.backgroundColor = null
+})
+
 const modalInputData = (petData) => {
   for (let index = 0; index < petList.length; index++) {
     

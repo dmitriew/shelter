@@ -1317,10 +1317,6 @@ button::-moz-focus-inner {
           align-items: center;
 }
 
-.modal:hover {
-  cursor: pointer;
-}
-
 .modal__window {
   margin: 0 auto;
   width: 100%;
