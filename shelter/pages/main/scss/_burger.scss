@@ -51,13 +51,30 @@
   & a {
     color: #CDCDCD;
   }
+  &:hover {
+    cursor: pointer;
+    color: #FAFAFA;
+  }
+  &:last-child {
+    margin-right: 0;
+    cursor: default;
+      &:hover {
+        color:#CDCDCD;
+      }
+  }
+  &:nth-child(3) {
+    &:hover {
+      color:#CDCDCD;
+      cursor: default;
+    }
+  } 
 }
 .burger__nav__item_active {
-  color: #FAFAFA;
   border-bottom: solid 3px #F1CDB3;
   padding-top: 5px;
   padding-bottom:1px;
   width: 243px;
+  cursor: pointer;
 }
 
 

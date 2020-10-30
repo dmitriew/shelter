@@ -188,6 +188,16 @@ button::-moz-focus-inner {
 
 .nav__item:last-child {
   margin-right: 0;
+  cursor: default;
+}
+
+.nav__item:last-child:hover {
+  color: #CDCDCD;
+}
+
+.nav__item:nth-child(3):hover {
+  color: #CDCDCD;
+  cursor: default;
 }
 
 @media (max-width: 768px) {
@@ -197,7 +207,6 @@ button::-moz-focus-inner {
 }
 
 .nav__item_active {
-  color: #FAFAFA;
   border-bottom: solid 3px #F1CDB3;
   padding-top: 5px;
   padding-bottom: 1px;
@@ -531,6 +540,66 @@ button::-moz-focus-inner {
     margin-bottom: 0;
     width: 234.33333px;
     min-height: 110px;
+  }
+  .help__item {
+    margin: 0;
+    margin-top: 60px;
+    margin-bottom: 0;
+    width: 150px;
+    min-height: 110px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 763px) {
+  .help__slider {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-right: 100px;
+    margin-left: 100px;
+  }
+  .help__item {
+    margin: 0;
+    margin-top: 60px;
+    margin-bottom: 0;
+    width: 234.33333px;
+    min-height: 110px;
+  }
+}
+
+@media (max-width: 729px) {
+  .help__slider {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+}
+
+@media (max-width: 629px) {
+  .help__slider {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 549px) {
+  .help__slider {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+  .help__item {
+    margin: 0;
+    margin-top: 60px;
+    margin-bottom: 0;
+    width: 150px;
+    min-height: 110px;
+    text-align: center;
   }
 }
 
@@ -944,12 +1013,31 @@ button::-moz-focus-inner {
   color: #CDCDCD;
 }
 
-.burger__nav__item_active {
+.burger__nav__item:hover {
+  cursor: pointer;
   color: #FAFAFA;
+}
+
+.burger__nav__item:last-child {
+  margin-right: 0;
+  cursor: default;
+}
+
+.burger__nav__item:last-child:hover {
+  color: #CDCDCD;
+}
+
+.burger__nav__item:nth-child(3):hover {
+  color: #CDCDCD;
+  cursor: default;
+}
+
+.burger__nav__item_active {
   border-bottom: solid 3px #F1CDB3;
   padding-top: 5px;
   padding-bottom: 1px;
   width: 243px;
+  cursor: pointer;
 }
 
 @media (max-width: 767px) {
@@ -1118,6 +1206,8 @@ button::-moz-focus-inner {
 
 .card:hover {
   background-color: #FFFFFF;
+  -webkit-box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+          box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 }
 
 .card__name {

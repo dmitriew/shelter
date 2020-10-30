@@ -94,8 +94,10 @@ const petList = [
       container = document.querySelector('.container'),
       scroll = calcScroll(),
       burger = document.querySelector('.burger'),
+      headerWrapper = document.querySelector('.header__wrap'),
       burgerList = document.querySelector('.burger__menu'),
       burgerUl = document.querySelector('.burger__nav'),
+      headerLogo = document.querySelector('.header__logo'),
       burgerHome = document.querySelector('#burger__nav__home');
       let showModal = document.querySelectorAll('.friends__card');
 
@@ -114,6 +116,7 @@ function calcScroll() {
 showModal.forEach(item => {
   item.addEventListener('click', (event) => {
     modalInputData(`${item.getAttribute('something')}`);
+    console.log(headerLogo)
     modalWindow.style.display = 'flex';
     document.body.style.overflow = 'hidden';
     document.body.style.marginRight = `${scroll}px`;
@@ -187,7 +190,10 @@ const closeBurger = () => {
   burgerUl.style.animationDirection = 'reverse';
   setTimeout('burgerList.setAttribute("hidden", "true")', 1000);
   burgerUl.style.animation = 'burger-hide 1s';
+  headerWrapper.style.backgroundColor = '#fff'
+  headerLogo.style.opacity = '1'
   burger.style.transform = '';
+  headerLogo.classList.remove('visually-hidden');
   document.body.style.overflow = 'visible';
   document.body.style.marginRight = `0px`;
 }
@@ -198,6 +204,8 @@ const burgerMenu = () => {
     if (burgerList.hasAttribute('hidden')) {
       document.body.style.marginRight = `${scroll}px`;
       burgerList.removeAttribute('hidden');
+      headerWrapper.style.background = 'none'
+      headerLogo.style.opacity = '0'
       burger.style.transform = 'rotate(90deg)';
       burgerUl.style.animationDirection = 'normal';
       burgerUl.style.animation = 'burger-show 1s';
@@ -234,7 +242,7 @@ let arrayStack = []
     positonPage = 1;
 
 
-for (let index = 0; index < 6; index++) {
+for (let index = 0; index < 16; index++) {
   var shuffledArr = petList.slice().sort(function(){
     return Math.random() - 0.5;
   });
@@ -295,7 +303,17 @@ const pagePosition = (pageNumber = 1) => {
     doubleprev.classList.remove('slider__item--active')
     doubleprev.classList.add('slider__item--disable')
   }
-  if (pageNumber === 6) {
+  if (pageNumber === 6 && window.innerWidth > 768) {
+    nextBtn.classList.remove('slider__item--active');
+    nextBtn.classList.add('slider__item--disable');
+    doublenext.classList.remove('slider__item--active');
+    doublenext.classList.add('slider__item--disable');
+  } else if (pageNumber === 8 && window.innerWidth > 320) {
+    nextBtn.classList.remove('slider__item--active');
+    nextBtn.classList.add('slider__item--disable');
+    doublenext.classList.remove('slider__item--active');
+    doublenext.classList.add('slider__item--disable');
+  } else if (pageNumber === 16 && window.innerWidth == 320) {
     nextBtn.classList.remove('slider__item--active');
     nextBtn.classList.add('slider__item--disable');
     doublenext.classList.remove('slider__item--active');
@@ -307,7 +325,7 @@ const pagePosition = (pageNumber = 1) => {
     doublenext.classList.remove('slider__item--disable');
   }
 
-  if (pageNumber >= 1 && positonPage === pageNumber && pageNumber < 7) {
+  if (pageNumber >= 1 && pageNumber < 17) {
     pPositon.innerHTML = pageNumber;
   }
 };
@@ -344,9 +362,19 @@ doubleprev.addEventListener('click', (e) => {
 doublenext.addEventListener('click', (e) => {
   if (e.target) {
     e.preventDefault();
-    pagePosition(positonPage = 6);
-    pushPetsStack(arrayStack[5])
-    count = 5;
+    if (window.innerWidth > 768) {
+      pagePosition(positonPage = 6);
+      pushPetsStack(arrayStack[5])
+      count = 5;
+    } else if (window.innerWidth > 320) {
+      pagePosition(positonPage = 8);
+      pushPetsStack(arrayStack[7])
+      count = 7;
+    } else {
+      pagePosition(positonPage = 16);
+      pushPetsStack(arrayStack[15])
+      count = 15;
+    }
 }});
 
 pushPetsStack(arrayStack[0]);
