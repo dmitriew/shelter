@@ -136,20 +136,6 @@ a {
   color: #292929;
 }
 
-.nav__item:last-child {
-  margin-right: 0;
-  cursor: default;
-}
-
-.nav__item:last-child:hover {
-  color: #545454;
-}
-
-.nav__item:nth-child(3):hover {
-  color: #545454;
-  cursor: default;
-}
-
 .nav__item_active {
   border-bottom: solid 3px #F1CDB3;
   padding-top: 5px;

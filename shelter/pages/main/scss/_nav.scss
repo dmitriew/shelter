@@ -20,19 +20,6 @@
     cursor: pointer;
     color: #FAFAFA;
   }
-  &:last-child {
-    margin-right: 0;
-    cursor: default;
-      &:hover {
-        color:#CDCDCD;
-      }
-  }
-  &:nth-child(3) {
-    &:hover {
-      color:#CDCDCD;
-      cursor: default;
-    }
-  }
 }
 @media (max-width: 768px) {
   .nav__item {

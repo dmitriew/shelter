@@ -14,19 +14,6 @@
       cursor: pointer;
         color: #292929;
     }
-    &:last-child {
-      margin-right: 0;
-      cursor: default;
-        &:hover {
-          color: #545454;
-        }
-    }
-    &:nth-child(3) {
-      &:hover {
-        color:#545454;
-        cursor: default;
-      }
-    }
   }
     &__item_active {
       border-bottom: solid 3px #F1CDB3;

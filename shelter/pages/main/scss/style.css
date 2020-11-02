@@ -186,20 +186,6 @@ button::-moz-focus-inner {
   color: #FAFAFA;
 }
 
-.nav__item:last-child {
-  margin-right: 0;
-  cursor: default;
-}
-
-.nav__item:last-child:hover {
-  color: #CDCDCD;
-}
-
-.nav__item:nth-child(3):hover {
-  color: #CDCDCD;
-  cursor: default;
-}
-
 @media (max-width: 768px) {
   .nav__item {
     margin-top: 24px;
